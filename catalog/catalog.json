@@ -1,0 +1,1151 @@
+{
+  "meta": {
+    "organisation": "Corvent Industries (fictief)",
+    "note": "Illustrative assumption — not real company data. Bron van waarheid voor de procescatalogus; docs en site worden hieruit gegenereerd met scripts/build_catalog.py.",
+    "asOf": "2026-10-10",
+    "statuses": [
+      "geen-model",
+      "draft",
+      "in-review",
+      "released",
+      "retired"
+    ]
+  },
+  "l0": [
+    {
+      "id": "S",
+      "name": "Sturende processen"
+    },
+    {
+      "id": "K",
+      "name": "Kernprocessen"
+    },
+    {
+      "id": "O",
+      "name": "Ondersteunende processen"
+    }
+  ],
+  "l1": [
+    {
+      "id": "STE",
+      "l0": "S",
+      "name": "Strategy-to-execution",
+      "nl": "Van strategie naar uitvoering",
+      "owner": "CEO"
+    },
+    {
+      "id": "DTC",
+      "l0": "S",
+      "name": "Detect-to-correct",
+      "nl": "Kwaliteit borgen en afwijkingen corrigeren",
+      "owner": "Quality director"
+    },
+    {
+      "id": "IDP",
+      "l0": "K",
+      "name": "Idea-to-product",
+      "nl": "Van idee tot vrijgegeven product",
+      "owner": "R&D director"
+    },
+    {
+      "id": "OTC",
+      "l0": "K",
+      "name": "Order-to-cash",
+      "nl": "Van klantorder tot ontvangen betaling",
+      "owner": "Commercial director"
+    },
+    {
+      "id": "PTP",
+      "l0": "K",
+      "name": "Plan-to-produce",
+      "nl": "Van vraagplan tot geproduceerd eindproduct",
+      "owner": "Supply chain director"
+    },
+    {
+      "id": "PRP",
+      "l0": "K",
+      "name": "Procure-to-pay",
+      "nl": "Van behoefte tot betaalde leverancier",
+      "owner": "Purchasing director"
+    },
+    {
+      "id": "ITR",
+      "l0": "K",
+      "name": "Issue-to-resolution",
+      "nl": "Van klacht of servicevraag tot oplossing",
+      "owner": null
+    },
+    {
+      "id": "PTM",
+      "l0": "O",
+      "name": "Plan-to-maintain",
+      "nl": "Installaties beschikbaar houden",
+      "owner": "Technical director"
+    },
+    {
+      "id": "HTR",
+      "l0": "O",
+      "name": "Hire-to-retire",
+      "nl": "Van vacature tot vertrek",
+      "owner": "HR director"
+    },
+    {
+      "id": "RTR",
+      "l0": "O",
+      "name": "Record-to-report",
+      "nl": "Van boeking tot rapport",
+      "owner": "CFO"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "C1",
+      "name": "Klant en markt",
+      "children": [
+        {
+          "id": "C1.1",
+          "name": "Marktbewerking",
+          "support": "ok"
+        },
+        {
+          "id": "C1.2",
+          "name": "Offertebeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C1.3",
+          "name": "Orderbeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C1.4",
+          "name": "Klantenservice",
+          "support": "gap"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Product en engineering",
+      "children": [
+        {
+          "id": "C2.1",
+          "name": "Productontwikkeling",
+          "support": "ok"
+        },
+        {
+          "id": "C2.2",
+          "name": "Productdatabeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C2.3",
+          "name": "Engineering changes",
+          "support": "gap"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "Supply chain planning",
+      "children": [
+        {
+          "id": "C3.1",
+          "name": "Vraagplanning",
+          "support": "gap"
+        },
+        {
+          "id": "C3.2",
+          "name": "Materiaalplanning",
+          "support": "ok"
+        },
+        {
+          "id": "C3.3",
+          "name": "Capaciteitsplanning",
+          "support": "ok"
+        },
+        {
+          "id": "C3.4",
+          "name": "Leverbelofte",
+          "support": "missing"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "Productie",
+      "children": [
+        {
+          "id": "C4.1",
+          "name": "Productie-uitvoering",
+          "support": "ok"
+        },
+        {
+          "id": "C4.2",
+          "name": "Productieterugmelding",
+          "support": "ok"
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "Inkoop",
+      "children": [
+        {
+          "id": "C5.1",
+          "name": "Leveranciersbeheer",
+          "support": "gap"
+        },
+        {
+          "id": "C5.2",
+          "name": "Bestelbeheer",
+          "support": "ok"
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "Logistiek en magazijn",
+      "children": [
+        {
+          "id": "C6.1",
+          "name": "Goederenontvangst",
+          "support": "ok"
+        },
+        {
+          "id": "C6.2",
+          "name": "Voorraadbeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C6.3",
+          "name": "Verzending",
+          "support": "ok"
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "name": "Kwaliteit",
+      "children": [
+        {
+          "id": "C7.1",
+          "name": "Kwaliteitscontrole",
+          "support": "ok"
+        },
+        {
+          "id": "C7.2",
+          "name": "Non-conformiteitenbeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C7.3",
+          "name": "Auditbeheer",
+          "support": "gap"
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "name": "Onderhoud en assets",
+      "children": [
+        {
+          "id": "C8.1",
+          "name": "Onderhoudsplanning",
+          "support": "ok"
+        },
+        {
+          "id": "C8.2",
+          "name": "Storingsbeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C8.3",
+          "name": "Wisselstukbeheer",
+          "support": "gap"
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "name": "Mens en organisatie",
+      "children": [
+        {
+          "id": "C9.1",
+          "name": "Werving",
+          "support": "ok"
+        },
+        {
+          "id": "C9.2",
+          "name": "Personeelsadministratie",
+          "support": "ok"
+        },
+        {
+          "id": "C9.3",
+          "name": "Talentontwikkeling",
+          "support": "gap"
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "name": "Financiën",
+      "children": [
+        {
+          "id": "C10.1",
+          "name": "Krediet en debiteuren",
+          "support": "gap"
+        },
+        {
+          "id": "C10.2",
+          "name": "Crediteurenbeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C10.3",
+          "name": "Kostprijsbeheer",
+          "support": "ok"
+        },
+        {
+          "id": "C10.4",
+          "name": "Financiële rapportering",
+          "support": "ok"
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "name": "Sturing",
+      "children": [
+        {
+          "id": "C11.1",
+          "name": "Strategieplanning",
+          "support": "ok"
+        },
+        {
+          "id": "C11.2",
+          "name": "Prestatiemanagement",
+          "support": "ok"
+        },
+        {
+          "id": "C11.3",
+          "name": "Portfoliomanagement",
+          "support": "gap"
+        },
+        {
+          "id": "C11.4",
+          "name": "Procesmanagement",
+          "support": "gap"
+        }
+      ]
+    }
+  ],
+  "systems": [
+    {
+      "id": "ERP",
+      "name": "ERP",
+      "note": "kern voor order, planning, inkoop, financiën"
+    },
+    {
+      "id": "MES",
+      "name": "MES",
+      "note": "productie-uitvoering en terugmelding op de vloer"
+    },
+    {
+      "id": "WMS",
+      "name": "WMS",
+      "note": "distributiecentrum"
+    },
+    {
+      "id": "CRM",
+      "name": "CRM",
+      "note": "leads, offertes, klantcontact; bevat de productconfigurator"
+    },
+    {
+      "id": "PLM",
+      "name": "PLM",
+      "note": "productdata, BOM, engineering changes"
+    },
+    {
+      "id": "QMS",
+      "name": "QMS",
+      "note": "non-conformiteiten, CAPA, audits"
+    },
+    {
+      "id": "CMMS",
+      "name": "CMMS",
+      "note": "onderhoud"
+    },
+    {
+      "id": "HRIS",
+      "name": "HRIS",
+      "note": "personeelsdossier, verloning via sociaal secretariaat"
+    },
+    {
+      "id": "BI",
+      "name": "BI",
+      "note": "rapportering"
+    },
+    {
+      "id": "EDI",
+      "name": "EDI",
+      "note": "orders en facturen met grote klanten en leveranciers"
+    },
+    {
+      "id": "REPO",
+      "name": "Procesrepository",
+      "note": "catalogus en BPMN-modellen als bestanden in git (ADR-001)"
+    },
+    {
+      "id": "XLS",
+      "name": "Excel-lijsten",
+      "note": "schaduw-IT; uitfaseren waar een systeem de capability dekt"
+    }
+  ],
+  "roles": [
+    "Customer service",
+    "Accountmanager",
+    "Sales director",
+    "Credit controller",
+    "Planner",
+    "Supply chain director",
+    "Productieleider",
+    "Operator",
+    "Aankoper",
+    "Magazijnier",
+    "Kwaliteitsingenieur",
+    "Onderhoudstechnicus",
+    "HR-partner",
+    "Controller",
+    "Process steward",
+    "Business process analyst",
+    "Process architect",
+    "Proceseigenaar",
+    "Procesraad",
+    "Klant",
+    "Leverancier",
+    "Procescatalogus"
+  ],
+  "processes": [
+    {
+      "id": "STE-01",
+      "l1": "STE",
+      "name": "Strategie en jaarplan bepalen",
+      "owner": "CEO",
+      "status": "draft",
+      "version": "0.3",
+      "capabilities": [
+        "C11.1"
+      ],
+      "systems": [
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "STE-02",
+      "l1": "STE",
+      "name": "Verbeterportfolio sturen",
+      "owner": null,
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C11.3"
+      ],
+      "systems": [
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "STE-03",
+      "l1": "STE",
+      "name": "Prestaties opvolgen",
+      "owner": "COO",
+      "status": "draft",
+      "version": "0.2",
+      "capabilities": [
+        "C11.2"
+      ],
+      "systems": [
+        "BI"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "STE-04",
+      "l1": "STE",
+      "name": "Proceswijziging doorvoeren",
+      "owner": "COO",
+      "status": "released",
+      "version": "1.0",
+      "capabilities": [
+        "C11.4"
+      ],
+      "systems": [
+        "REPO"
+      ],
+      "review": "2027-04-30",
+      "model": "docs/06-governance/bpmn/ste-04-proceswijziging.bpmn"
+    },
+    {
+      "id": "DTC-01",
+      "l1": "DTC",
+      "name": "Inkomende goederen keuren",
+      "owner": "Quality manager",
+      "status": "draft",
+      "version": "0.5",
+      "capabilities": [
+        "C7.1",
+        "C6.1"
+      ],
+      "systems": [
+        "QMS",
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "DTC-02",
+      "l1": "DTC",
+      "name": "Non-conformiteit behandelen",
+      "owner": "Quality manager",
+      "status": "released",
+      "version": "2.0",
+      "capabilities": [
+        "C7.2"
+      ],
+      "systems": [
+        "QMS"
+      ],
+      "review": "2027-02-28",
+      "model": "extern (Visio, wordt omgezet)"
+    },
+    {
+      "id": "DTC-03",
+      "l1": "DTC",
+      "name": "Corrigerende maatregelen opvolgen",
+      "owner": null,
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C7.2"
+      ],
+      "systems": [
+        "QMS",
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "DTC-04",
+      "l1": "DTC",
+      "name": "Interne audit uitvoeren",
+      "owner": "Quality director",
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C7.3"
+      ],
+      "systems": [
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "IDP-01",
+      "l1": "IDP",
+      "name": "Productidee beoordelen",
+      "owner": "R&D director",
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C2.1"
+      ],
+      "systems": [
+        "PLM"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "IDP-02",
+      "l1": "IDP",
+      "name": "Product ontwikkelen en vrijgeven",
+      "owner": "R&D director",
+      "status": "draft",
+      "version": "0.4",
+      "capabilities": [
+        "C2.1",
+        "C2.2"
+      ],
+      "systems": [
+        "PLM"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "IDP-03",
+      "l1": "IDP",
+      "name": "Engineering change doorvoeren",
+      "owner": null,
+      "status": "draft",
+      "version": "0.1",
+      "capabilities": [
+        "C2.3"
+      ],
+      "systems": [
+        "PLM",
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "OTC-01",
+      "l1": "OTC",
+      "name": "Offerte opstellen",
+      "owner": "Sales director",
+      "status": "draft",
+      "version": "0.6",
+      "capabilities": [
+        "C1.2"
+      ],
+      "systems": [
+        "CRM"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "OTC-02",
+      "l1": "OTC",
+      "name": "Order aanvaarden",
+      "owner": "Customer service manager",
+      "status": "in-review",
+      "version": "1.0",
+      "capabilities": [
+        "C1.3",
+        "C10.1"
+      ],
+      "systems": [
+        "ERP",
+        "CRM",
+        "EDI"
+      ],
+      "review": null,
+      "model": "docs/04-reference-model/bpmn/otc-02-to-be.bpmn",
+      "aliases": [
+        "Orderintake (ERP-documentatie)"
+      ]
+    },
+    {
+      "id": "OTC-03",
+      "l1": "OTC",
+      "name": "Leverdatum bevestigen",
+      "owner": null,
+      "status": "in-review",
+      "version": "1.0",
+      "capabilities": [
+        "C3.4",
+        "C3.3"
+      ],
+      "systems": [
+        "ERP"
+      ],
+      "review": null,
+      "model": "docs/05-review/bpmn/otc-03-to-be.bpmn",
+      "issue": "Eigenaarsconflict sales ↔ planning: voorstel D-03 voor procesraad #2"
+    },
+    {
+      "id": "OTC-04",
+      "l1": "OTC",
+      "name": "Order uitleveren",
+      "owner": "Logistics manager",
+      "status": "draft",
+      "version": "0.7",
+      "capabilities": [
+        "C6.3"
+      ],
+      "systems": [
+        "WMS",
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "OTC-05",
+      "l1": "OTC",
+      "name": "Klant factureren",
+      "owner": "Finance manager",
+      "status": "draft",
+      "version": "0.5",
+      "capabilities": [
+        "C10.1"
+      ],
+      "systems": [
+        "ERP",
+        "EDI"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "OTC-06",
+      "l1": "OTC",
+      "name": "Betaling opvolgen",
+      "owner": "Credit manager",
+      "status": "draft",
+      "version": "0.4",
+      "capabilities": [
+        "C10.1"
+      ],
+      "systems": [
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "OTC-07",
+      "l1": "OTC",
+      "name": "Klachten behandelen",
+      "owner": null,
+      "status": "retired",
+      "version": "0.2",
+      "capabilities": [
+        "C1.4"
+      ],
+      "systems": [
+        "CRM"
+      ],
+      "review": null,
+      "model": null,
+      "issue": "Dubbel met ITR-01; procesraad #1 besliste D-02: enkel onder ITR-01 beheren",
+      "aliases": [
+        "zie ITR-01"
+      ]
+    },
+    {
+      "id": "PTP-01",
+      "l1": "PTP",
+      "name": "Vraag en aanbod afstemmen",
+      "owner": null,
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C3.1"
+      ],
+      "systems": [
+        "XLS",
+        "BI"
+      ],
+      "review": null,
+      "model": null,
+      "aliases": [
+        "S&OP"
+      ]
+    },
+    {
+      "id": "PTP-02",
+      "l1": "PTP",
+      "name": "Materialen plannen",
+      "owner": "Planning manager",
+      "status": "draft",
+      "version": "0.8",
+      "capabilities": [
+        "C3.2"
+      ],
+      "systems": [
+        "ERP"
+      ],
+      "review": null,
+      "model": null,
+      "aliases": [
+        "MRP-run"
+      ]
+    },
+    {
+      "id": "PTP-03",
+      "l1": "PTP",
+      "name": "Productieorder plannen en vrijgeven",
+      "owner": "Planning manager",
+      "status": "draft",
+      "version": "0.6",
+      "capabilities": [
+        "C3.3"
+      ],
+      "systems": [
+        "ERP",
+        "MES"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PTP-04",
+      "l1": "PTP",
+      "name": "Produceren en terugmelden",
+      "owner": "Plant manager",
+      "status": "released",
+      "version": "1.1",
+      "capabilities": [
+        "C4.1",
+        "C4.2"
+      ],
+      "systems": [
+        "MES",
+        "ERP"
+      ],
+      "review": "2027-01-31",
+      "model": "extern (PowerPoint, wordt omgezet)"
+    },
+    {
+      "id": "PTP-05",
+      "l1": "PTP",
+      "name": "Eindproduct keuren en stockeren",
+      "owner": "Plant manager",
+      "status": "draft",
+      "version": "0.3",
+      "capabilities": [
+        "C7.1",
+        "C6.2"
+      ],
+      "systems": [
+        "MES",
+        "WMS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PTP-06",
+      "l1": "PTP",
+      "name": "Voorraad tellen en corrigeren",
+      "owner": "Logistics manager",
+      "status": "draft",
+      "version": "0.5",
+      "capabilities": [
+        "C6.2"
+      ],
+      "systems": [
+        "WMS",
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PRP-01",
+      "l1": "PRP",
+      "name": "Leverancier selecteren",
+      "owner": "Purchasing director",
+      "status": "draft",
+      "version": "0.4",
+      "capabilities": [
+        "C5.1"
+      ],
+      "systems": [
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PRP-02",
+      "l1": "PRP",
+      "name": "Materiaal bestellen",
+      "owner": "Purchasing manager",
+      "status": "released",
+      "version": "1.3",
+      "capabilities": [
+        "C5.2"
+      ],
+      "systems": [
+        "ERP",
+        "EDI"
+      ],
+      "review": "2027-03-31",
+      "model": "extern (bpmn.io, wordt nagekeken)"
+    },
+    {
+      "id": "PRP-03",
+      "l1": "PRP",
+      "name": "Goederen ontvangen",
+      "owner": "Logistics manager",
+      "status": "draft",
+      "version": "0.9",
+      "capabilities": [
+        "C6.1"
+      ],
+      "systems": [
+        "WMS",
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PRP-04",
+      "l1": "PRP",
+      "name": "Leveranciersfactuur verwerken",
+      "owner": "Finance manager",
+      "status": "released",
+      "version": "1.0",
+      "capabilities": [
+        "C10.2"
+      ],
+      "systems": [
+        "ERP",
+        "EDI"
+      ],
+      "review": "2026-09-30",
+      "model": "extern (Word, wordt omgezet)"
+    },
+    {
+      "id": "PRP-05",
+      "l1": "PRP",
+      "name": "Leveranciersprestaties evalueren",
+      "owner": "Purchasing manager",
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C5.1"
+      ],
+      "systems": [
+        "BI",
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "ITR-01",
+      "l1": "ITR",
+      "name": "Klachten behandelen",
+      "owner": null,
+      "status": "draft",
+      "version": "0.3",
+      "capabilities": [
+        "C1.4",
+        "C7.2"
+      ],
+      "systems": [
+        "CRM",
+        "QMS"
+      ],
+      "review": null,
+      "model": null,
+      "aliases": [
+        "vroeger ook OTC-07"
+      ]
+    },
+    {
+      "id": "ITR-02",
+      "l1": "ITR",
+      "name": "Service-interventie uitvoeren",
+      "owner": null,
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C1.4"
+      ],
+      "systems": [
+        "CRM"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "ITR-03",
+      "l1": "ITR",
+      "name": "Retour verwerken",
+      "owner": null,
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C1.4",
+        "C6.1"
+      ],
+      "systems": [
+        "WMS",
+        "ERP"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PTM-01",
+      "l1": "PTM",
+      "name": "Preventief onderhoud plannen",
+      "owner": "Maintenance manager",
+      "status": "draft",
+      "version": "0.6",
+      "capabilities": [
+        "C8.1"
+      ],
+      "systems": [
+        "CMMS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "PTM-02",
+      "l1": "PTM",
+      "name": "Storing verhelpen",
+      "owner": "Maintenance manager",
+      "status": "released",
+      "version": "1.2",
+      "capabilities": [
+        "C8.2"
+      ],
+      "systems": [
+        "CMMS",
+        "MES"
+      ],
+      "review": "2027-05-31",
+      "model": "extern (Visio, wordt omgezet)"
+    },
+    {
+      "id": "PTM-03",
+      "l1": "PTM",
+      "name": "Wisselstukken beheren",
+      "owner": "Maintenance manager",
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C8.3"
+      ],
+      "systems": [
+        "CMMS",
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "HTR-01",
+      "l1": "HTR",
+      "name": "Medewerker aanwerven",
+      "owner": "HR manager",
+      "status": "draft",
+      "version": "0.7",
+      "capabilities": [
+        "C9.1"
+      ],
+      "systems": [
+        "HRIS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "HTR-02",
+      "l1": "HTR",
+      "name": "Medewerker onboarden",
+      "owner": "HR manager",
+      "status": "released",
+      "version": "1.1",
+      "capabilities": [
+        "C9.2"
+      ],
+      "systems": [
+        "HRIS"
+      ],
+      "review": "2027-06-30",
+      "model": "extern (Word, wordt omgezet)"
+    },
+    {
+      "id": "HTR-03",
+      "l1": "HTR",
+      "name": "Prestaties en ontwikkeling opvolgen",
+      "owner": "HR director",
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C9.3"
+      ],
+      "systems": [
+        "HRIS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "HTR-04",
+      "l1": "HTR",
+      "name": "Medewerker uitstroom afhandelen",
+      "owner": "HR manager",
+      "status": "geen-model",
+      "version": null,
+      "capabilities": [
+        "C9.2"
+      ],
+      "systems": [
+        "HRIS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "RTR-01",
+      "l1": "RTR",
+      "name": "Maand afsluiten",
+      "owner": "Finance manager",
+      "status": "released",
+      "version": "1.4",
+      "capabilities": [
+        "C10.4"
+      ],
+      "systems": [
+        "ERP",
+        "BI"
+      ],
+      "review": "2027-01-31",
+      "model": "extern (Word, wordt omgezet)"
+    },
+    {
+      "id": "RTR-02",
+      "l1": "RTR",
+      "name": "Kostprijs berekenen",
+      "owner": "Controller",
+      "status": "draft",
+      "version": "0.5",
+      "capabilities": [
+        "C10.3"
+      ],
+      "systems": [
+        "ERP",
+        "XLS"
+      ],
+      "review": null,
+      "model": null
+    },
+    {
+      "id": "RTR-03",
+      "l1": "RTR",
+      "name": "Rapport aan directie opstellen",
+      "owner": "CFO",
+      "status": "draft",
+      "version": "0.4",
+      "capabilities": [
+        "C10.4",
+        "C11.2"
+      ],
+      "systems": [
+        "BI"
+      ],
+      "review": null,
+      "model": null
+    }
+  ]
+}

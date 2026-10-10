@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 392" width="1100" height="392" role="img" aria-label="Proceshuis Corvent: sturende, kern- en ondersteunende processen" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13">
+<rect width="1100" height="392" fill="#ffffff"/>
+<path d="M16,58 L550.0,16 L1084,58 z" fill="#1f4e79"/>
+<text x="550.0" y="48" text-anchor="middle" fill="#ffffff" font-weight="700" font-size="15">Corvent Process House — L0 / L1</text>
+<rect x="16" y="70" width="1068" height="92" rx="8" fill="#e8eef5" stroke="#c9d1db"/>
+<text x="28" y="90" font-weight="700" fill="#1b2430">Sturende processen</text>
+<rect x="28" y="100" width="517" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="286" y="121" text-anchor="middle" font-weight="600" fill="#1b2430">STE · Strategy-to-execution</text>
+<text x="286" y="139" text-anchor="middle" font-size="11" fill="#5b6675">CEO</text>
+<rect x="555" y="100" width="517" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="814" y="121" text-anchor="middle" font-weight="600" fill="#1b2430">DTC · Detect-to-correct</text>
+<text x="814" y="139" text-anchor="middle" font-size="11" fill="#5b6675">Quality director</text>
+<rect x="16" y="174" width="1068" height="92" rx="8" fill="#dfeee6" stroke="#c9d1db"/>
+<text x="28" y="194" font-weight="700" fill="#1b2430">Kernprocessen</text>
+<rect x="28" y="204" width="201" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="128" y="225" text-anchor="middle" font-weight="600" fill="#1b2430">IDP · Idea-to-product</text>
+<text x="128" y="243" text-anchor="middle" font-size="11" fill="#5b6675">R&amp;D director</text>
+<rect x="239" y="204" width="201" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="339" y="225" text-anchor="middle" font-weight="600" fill="#1b2430">OTC · Order-to-cash</text>
+<text x="339" y="243" text-anchor="middle" font-size="11" fill="#5b6675">Commercial director</text>
+<rect x="450" y="204" width="201" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="550" y="225" text-anchor="middle" font-weight="600" fill="#1b2430">PTP · Plan-to-produce</text>
+<text x="550" y="243" text-anchor="middle" font-size="11" fill="#5b6675">Supply chain director</text>
+<rect x="660" y="204" width="201" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="761" y="225" text-anchor="middle" font-weight="600" fill="#1b2430">PRP · Procure-to-pay</text>
+<text x="761" y="243" text-anchor="middle" font-size="11" fill="#5b6675">Purchasing director</text>
+<rect x="871" y="204" width="201" height="50" rx="6" fill="#ffffff" stroke="#a3312a" stroke-dasharray="5 3"/>
+<text x="972" y="225" text-anchor="middle" font-weight="600" fill="#1b2430">ITR · Issue-to-resolution</text>
+<text x="972" y="243" text-anchor="middle" font-size="11" fill="#5b6675">geen eigenaar</text>
+<rect x="16" y="278" width="1068" height="92" rx="8" fill="#f3efe4" stroke="#c9d1db"/>
+<text x="28" y="298" font-weight="700" fill="#1b2430">Ondersteunende processen</text>
+<rect x="28" y="308" width="341" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="199" y="329" text-anchor="middle" font-weight="600" fill="#1b2430">PTM · Plan-to-maintain</text>
+<text x="199" y="347" text-anchor="middle" font-size="11" fill="#5b6675">Technical director</text>
+<rect x="379" y="308" width="341" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="550" y="329" text-anchor="middle" font-weight="600" fill="#1b2430">HTR · Hire-to-retire</text>
+<text x="550" y="347" text-anchor="middle" font-size="11" fill="#5b6675">HR director</text>
+<rect x="731" y="308" width="341" height="50" rx="6" fill="#ffffff" stroke="#3b4652"/>
+<text x="901" y="329" text-anchor="middle" font-weight="600" fill="#1b2430">RTR · Record-to-report</text>
+<text x="901" y="347" text-anchor="middle" font-size="11" fill="#5b6675">CFO</text>
+</svg>

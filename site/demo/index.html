@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo — Corvent Process House</title>
+  <meta name="description" content="Klikbaar prototype: procescatalogus, automatische modelcheck, review van een analistenmodel, procesraad en verbeterportfolio. Fictieve data, rondleiding van 2 minuten.">
+  <meta property="og:title" content="Demo — Corvent Process House">
+  <meta property="og:description" content="Catalogus → review → procesraad → release, in 2 minuten. Independent portfolio case, fictional organisation.">
+  <meta property="og:image" content="https://phlppgdfry.github.io/manufacturing-process-architecture-case/assets/og-image.png">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="demo">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../">Corvent Process House</a>
+      <nav aria-label="Secties">
+        <a href="../">Overzicht</a>
+        <a href="./" aria-current="page">Demo</a>
+        <a href="../for/process-architect/">Lens: process architect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="demo-head">
+      <div>
+        <p class="eyebrow">Prototype · fictieve data · alles draait in je browser</p>
+        <h1>Proceshuis in werking</h1>
+        <p class="lede">Van catalogus naar review, beslissing en release. Het reviewrapport komt rechtstreeks uit <code>scripts/check_models.py</code>; de beslissing en de release worden gesimuleerd.</p>
+      </div>
+      <div class="cta-row">
+        <button type="button" class="btn primary" id="btn-tour">Rondleiding (2 min)</button>
+        <button type="button" class="btn" id="btn-reset">Demo resetten</button>
+      </div>
+    </section>
+
+    <nav class="tabs" role="tablist" aria-label="Weergaven">
+      <button type="button" role="tab" id="tab-catalogus" data-view="catalogus" aria-selected="true">Catalogus</button>
+      <button type="button" role="tab" id="tab-review" data-view="review" aria-selected="false">Review</button>
+      <button type="button" role="tab" id="tab-procesraad" data-view="procesraad" aria-selected="false">Procesraad</button>
+      <button type="button" role="tab" id="tab-verbeteringen" data-view="verbeteringen" aria-selected="false">Verbeteringen</button>
+    </nav>
+
+    <div class="demo-grid">
+      <div class="demo-main">
+        <!-- Catalogus -->
+        <section class="view" id="view-catalogus" role="tabpanel" aria-labelledby="tab-catalogus">
+          <div class="grid kpis" id="kpis"></div>
+          <div class="filters" id="filters">
+            <label>E2E-proces <select id="f-l1"><option value="">alle</option></select></label>
+            <label>Status <select id="f-status"><option value="">alle</option></select></label>
+            <label>Systeem <select id="f-system"><option value="">alle</option></select></label>
+            <label class="check"><input type="checkbox" id="f-noowner"> zonder eigenaar</label>
+            <label class="grow">Zoeken <input type="search" id="f-q" placeholder="ID, naam of alias"></label>
+          </div>
+          <div class="split">
+            <div class="list" id="list" aria-live="polite"></div>
+            <aside class="detail card" id="detail"><p class="muted">Kies een proces in de lijst.</p></aside>
+          </div>
+        </section>
+
+        <!-- Review -->
+        <section class="view hidden" id="view-review" role="tabpanel" aria-labelledby="tab-review">
+          <div class="toggle" role="group" aria-label="Kies versie">
+            <button type="button" class="btn" data-model="draft" aria-pressed="true">Draft van de analist</button>
+            <button type="button" class="btn" data-model="tobe" aria-pressed="false">Herwerkte versie v1.0</button>
+          </div>
+          <figure class="diagram" id="review-figure"><img id="review-img" src="../assets/models/otc-03-draft.svg" alt="Draft-model OTC-03 van de analist" width="1104" height="404"><figcaption id="review-caption"></figcaption></figure>
+          <div class="split">
+            <div class="card" id="findings"></div>
+            <div class="card" id="feedback">
+              <h3>Feedback van de architect: 5 punten, elk als vraag</h3>
+              <ol class="feedback-list">
+                <li><strong>R02 / M04</strong> Na <em>Datum aanpassen</em> stopt het model. Wat gebeurt er als de gevraagde datum niet haalbaar is: wie belt de klant, en wat als die niet akkoord gaat?</li>
+                <li><strong>R06 / M04</strong> De inclusieve gateway laat meerdere paden tegelijk toe. Bedoel je één vraag met twee antwoorden?</li>
+                <li><strong>R11</strong> Welke rol beslist over de datum: de planner, of de accountmanager na overleg met de klant?</li>
+                <li><strong>M02</strong> Volgens OTC-02 start dit proces na het kredietakkoord. Klopt dat, en waar gaat het resultaat naartoe?</li>
+                <li><strong>M01</strong> Voor wie is dit model: de planner of de fit-to-standard-workshop?</li>
+              </ol>
+              <p class="note">Naamgeving (R03), labels (R05) en attributen (R09) lost de analist zelf op met de checklist.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Procesraad -->
+        <section class="view hidden" id="view-procesraad" role="tabpanel" aria-labelledby="tab-procesraad">
+          <div class="grid cards-3" id="decided"></div>
+          <article class="card decision" id="d03">
+            <span class="chip warn" id="d03-chip">Voorstel · procesraad #2</span>
+            <h3>D-03 · Wie is eigenaar van OTC-03 <em>Leverdatum bevestigen</em>?</h3>
+            <p>Sales belooft datums (P1), planning wijzigt ze stil (P3). Niemand is eigenaar van de belofte, en capability C3.4 <em>Leverbelofte</em> is niet ondersteund.</p>
+            <fieldset id="d03-options">
+              <legend>Opties</legend>
+              <label><input type="radio" name="d03" value="A"> A · Sales director: dicht bij de klant, maar beslist over capaciteit die het niet beheert</label>
+              <label><input type="radio" name="d03" value="B"> B · Supply chain director (voorstel): beslist over wat haalbaar is; standaardgevallen gaan automatisch, sales blijft het gezicht naar de klant</label>
+              <label><input type="radio" name="d03" value="C"> C · Gedeeld sales + supply chain: iedereen akkoord in de vergadering</label>
+            </fieldset>
+            <div class="cta-row"><button type="button" class="btn primary" id="btn-decide">Beslissing toepassen</button></div>
+            <p id="d03-msg" class="msg" role="status"></p>
+          </article>
+        </section>
+
+        <!-- Verbeteringen -->
+        <section class="view hidden" id="view-verbeteringen" role="tabpanel" aria-labelledby="tab-verbeteringen">
+          <div class="table-wrap"><table id="initiatives"></table></div>
+          <p class="note">Illustrative assumptions — not real company data.</p>
+        </section>
+      </div>
+
+      <aside class="eventlog card" aria-label="Eventlog">
+        <h3>Achter de schermen</h3>
+        <ol id="log"></ol>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Independent portfolio case study based on a fictional organisation. It contains no confidential information from any real employer or the hiring company. All figures are illustrative assumptions — not real company data.</p>
+      <p>Philippe Godfroy · <a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case">Broncode op GitHub</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="../assets/demo.mjs"></script>
+</body>
+</html>

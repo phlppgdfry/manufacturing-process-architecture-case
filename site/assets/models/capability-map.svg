@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1224 604" width="1224" height="604" role="img" aria-label="Capability map Corvent met ondersteuning door systemen" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12">
+<rect width="1224" height="604" fill="#ffffff"/>
+<text x="12" y="26" font-weight="700" font-size="15" fill="#1b2430">Capability map (L1–L2) — kleur = ondersteuning door systemen, getal = aantal L2-processen</text>
+<rect x="12" y="40" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="22" y="62" font-weight="700" fill="#1b2430">C1 Klant en markt</text>
+<rect x="20" y="74" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="28" y="93" font-weight="600" fill="#1b2430">Marktbewerking</text>
+<text x="28" y="110" font-size="11" fill="#5b6675">C1.1 · 0 proces(sen)</text>
+<rect x="20" y="126" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="28" y="145" font-weight="600" fill="#1b2430">Offertebeheer</text>
+<text x="28" y="162" font-size="11" fill="#5b6675">C1.2 · 1 proces(sen)</text>
+<rect x="20" y="178" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="28" y="197" font-weight="600" fill="#1b2430">Orderbeheer</text>
+<text x="28" y="214" font-size="11" fill="#5b6675">C1.3 · 1 proces(sen)</text>
+<rect x="20" y="230" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="28" y="249" font-weight="600" fill="#1b2430">Klantenservice</text>
+<text x="28" y="266" font-size="11" fill="#5b6675">C1.4 · 3 proces(sen)</text>
+<rect x="214" y="40" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="224" y="62" font-weight="700" fill="#1b2430">C2 Product en engineering</text>
+<rect x="222" y="74" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="230" y="93" font-weight="600" fill="#1b2430">Productontwikkeling</text>
+<text x="230" y="110" font-size="11" fill="#5b6675">C2.1 · 2 proces(sen)</text>
+<rect x="222" y="126" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="230" y="145" font-weight="600" fill="#1b2430">Productdatabeheer</text>
+<text x="230" y="162" font-size="11" fill="#5b6675">C2.2 · 1 proces(sen)</text>
+<rect x="222" y="178" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="230" y="197" font-weight="600" fill="#1b2430">Engineering changes</text>
+<text x="230" y="214" font-size="11" fill="#5b6675">C2.3 · 1 proces(sen)</text>
+<rect x="416" y="40" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="426" y="62" font-weight="700" fill="#1b2430">C3 Supply chain planning</text>
+<rect x="424" y="74" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="432" y="93" font-weight="600" fill="#1b2430">Vraagplanning</text>
+<text x="432" y="110" font-size="11" fill="#5b6675">C3.1 · 1 proces(sen)</text>
+<rect x="424" y="126" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="432" y="145" font-weight="600" fill="#1b2430">Materiaalplanning</text>
+<text x="432" y="162" font-size="11" fill="#5b6675">C3.2 · 1 proces(sen)</text>
+<rect x="424" y="178" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="432" y="197" font-weight="600" fill="#1b2430">Capaciteitsplanning</text>
+<text x="432" y="214" font-size="11" fill="#5b6675">C3.3 · 2 proces(sen)</text>
+<rect x="424" y="230" width="174" height="46" rx="6" fill="#f8e1df" stroke="#a3312a"/>
+<text x="432" y="249" font-weight="600" fill="#1b2430">Leverbelofte</text>
+<text x="432" y="266" font-size="11" fill="#5b6675">C3.4 · 1 proces(sen)</text>
+<rect x="618" y="40" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="628" y="62" font-weight="700" fill="#1b2430">C4 Productie</text>
+<rect x="626" y="74" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="634" y="93" font-weight="600" fill="#1b2430">Productie-uitvoering</text>
+<text x="634" y="110" font-size="11" fill="#5b6675">C4.1 · 1 proces(sen)</text>
+<rect x="626" y="126" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="634" y="145" font-weight="600" fill="#1b2430">Productieterugmelding</text>
+<text x="634" y="162" font-size="11" fill="#5b6675">C4.2 · 1 proces(sen)</text>
+<rect x="820" y="40" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="830" y="62" font-weight="700" fill="#1b2430">C5 Inkoop</text>
+<rect x="828" y="74" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="836" y="93" font-weight="600" fill="#1b2430">Leveranciersbeheer</text>
+<text x="836" y="110" font-size="11" fill="#5b6675">C5.1 · 2 proces(sen)</text>
+<rect x="828" y="126" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="836" y="145" font-weight="600" fill="#1b2430">Bestelbeheer</text>
+<text x="836" y="162" font-size="11" fill="#5b6675">C5.2 · 1 proces(sen)</text>
+<rect x="1022" y="40" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="1032" y="62" font-weight="700" fill="#1b2430">C6 Logistiek en magazijn</text>
+<rect x="1030" y="74" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="1038" y="93" font-weight="600" fill="#1b2430">Goederenontvangst</text>
+<text x="1038" y="110" font-size="11" fill="#5b6675">C6.1 · 3 proces(sen)</text>
+<rect x="1030" y="126" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="1038" y="145" font-weight="600" fill="#1b2430">Voorraadbeheer</text>
+<text x="1038" y="162" font-size="11" fill="#5b6675">C6.2 · 2 proces(sen)</text>
+<rect x="1030" y="178" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="1038" y="197" font-weight="600" fill="#1b2430">Verzending</text>
+<text x="1038" y="214" font-size="11" fill="#5b6675">C6.3 · 1 proces(sen)</text>
+<rect x="12" y="302" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="22" y="324" font-weight="700" fill="#1b2430">C7 Kwaliteit</text>
+<rect x="20" y="336" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="28" y="355" font-weight="600" fill="#1b2430">Kwaliteitscontrole</text>
+<text x="28" y="372" font-size="11" fill="#5b6675">C7.1 · 2 proces(sen)</text>
+<rect x="20" y="388" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="28" y="407" font-weight="600" fill="#1b2430">Non-conformiteitenbeheer</text>
+<text x="28" y="424" font-size="11" fill="#5b6675">C7.2 · 3 proces(sen)</text>
+<rect x="20" y="440" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="28" y="459" font-weight="600" fill="#1b2430">Auditbeheer</text>
+<text x="28" y="476" font-size="11" fill="#5b6675">C7.3 · 1 proces(sen)</text>
+<rect x="214" y="302" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="224" y="324" font-weight="700" fill="#1b2430">C8 Onderhoud en assets</text>
+<rect x="222" y="336" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="230" y="355" font-weight="600" fill="#1b2430">Onderhoudsplanning</text>
+<text x="230" y="372" font-size="11" fill="#5b6675">C8.1 · 1 proces(sen)</text>
+<rect x="222" y="388" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="230" y="407" font-weight="600" fill="#1b2430">Storingsbeheer</text>
+<text x="230" y="424" font-size="11" fill="#5b6675">C8.2 · 1 proces(sen)</text>
+<rect x="222" y="440" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="230" y="459" font-weight="600" fill="#1b2430">Wisselstukbeheer</text>
+<text x="230" y="476" font-size="11" fill="#5b6675">C8.3 · 1 proces(sen)</text>
+<rect x="416" y="302" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="426" y="324" font-weight="700" fill="#1b2430">C9 Mens en organisatie</text>
+<rect x="424" y="336" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="432" y="355" font-weight="600" fill="#1b2430">Werving</text>
+<text x="432" y="372" font-size="11" fill="#5b6675">C9.1 · 1 proces(sen)</text>
+<rect x="424" y="388" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="432" y="407" font-weight="600" fill="#1b2430">Personeelsadministratie</text>
+<text x="432" y="424" font-size="11" fill="#5b6675">C9.2 · 2 proces(sen)</text>
+<rect x="424" y="440" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="432" y="459" font-weight="600" fill="#1b2430">Talentontwikkeling</text>
+<text x="432" y="476" font-size="11" fill="#5b6675">C9.3 · 1 proces(sen)</text>
+<rect x="618" y="302" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="628" y="324" font-weight="700" fill="#1b2430">C10 Financiën</text>
+<rect x="626" y="336" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="634" y="355" font-weight="600" fill="#1b2430">Krediet en debiteuren</text>
+<text x="634" y="372" font-size="11" fill="#5b6675">C10.1 · 3 proces(sen)</text>
+<rect x="626" y="388" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="634" y="407" font-weight="600" fill="#1b2430">Crediteurenbeheer</text>
+<text x="634" y="424" font-size="11" fill="#5b6675">C10.2 · 1 proces(sen)</text>
+<rect x="626" y="440" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="634" y="459" font-weight="600" fill="#1b2430">Kostprijsbeheer</text>
+<text x="634" y="476" font-size="11" fill="#5b6675">C10.3 · 1 proces(sen)</text>
+<rect x="626" y="492" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="634" y="511" font-weight="600" fill="#1b2430">Financiële rapportering</text>
+<text x="634" y="528" font-size="11" fill="#5b6675">C10.4 · 2 proces(sen)</text>
+<rect x="820" y="302" width="190" height="250" rx="8" fill="#f4f6f9" stroke="#c9d1db"/>
+<text x="830" y="324" font-weight="700" fill="#1b2430">C11 Sturing</text>
+<rect x="828" y="336" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="836" y="355" font-weight="600" fill="#1b2430">Strategieplanning</text>
+<text x="836" y="372" font-size="11" fill="#5b6675">C11.1 · 1 proces(sen)</text>
+<rect x="828" y="388" width="174" height="46" rx="6" fill="#e3f1e9" stroke="#1e7b4f"/>
+<text x="836" y="407" font-weight="600" fill="#1b2430">Prestatiemanagement</text>
+<text x="836" y="424" font-size="11" fill="#5b6675">C11.2 · 2 proces(sen)</text>
+<rect x="828" y="440" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="836" y="459" font-weight="600" fill="#1b2430">Portfoliomanagement</text>
+<text x="836" y="476" font-size="11" fill="#5b6675">C11.3 · 1 proces(sen)</text>
+<rect x="828" y="492" width="174" height="46" rx="6" fill="#fbf0dc" stroke="#9a5b00"/>
+<text x="836" y="511" font-weight="600" fill="#1b2430">Procesmanagement</text>
+<text x="836" y="528" font-size="11" fill="#5b6675">C11.4 · 1 proces(sen)</text>
+<rect x="12" y="570" width="16" height="16" rx="3" fill="#e3f1e9" stroke="#1e7b4f"/><text x="34" y="583" fill="#1b2430">goed ondersteund</text>
+<rect x="202" y="570" width="16" height="16" rx="3" fill="#fbf0dc" stroke="#9a5b00"/><text x="224" y="583" fill="#1b2430">deels / Excel</text>
+<rect x="392" y="570" width="16" height="16" rx="3" fill="#f8e1df" stroke="#a3312a"/><text x="414" y="583" fill="#1b2430">niet ondersteund</text>
+<text x="1212" y="583" text-anchor="end" font-size="11" fill="#5b6675">Illustrative assumption — not real company data</text>
+</svg>

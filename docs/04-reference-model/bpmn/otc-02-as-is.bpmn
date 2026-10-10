@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Defs_otc_02_as_is" targetNamespace="https://github.com/phlppgdfry/manufacturing-process-architecture-case" exporter="build_models.py" exporterVersion="1">
+  <bpmn:collaboration id="Collab_otc_02_as_is">
+    <bpmn:participant id="Pool_otc_02_as_is" name="OTC-02 Order aanvaarden — as-is (vandaag)" processRef="Process_otc_02_as_is" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_otc_02_as_is" name="OTC-02 Order aanvaarden — as-is (vandaag)" isExecutable="false">
+    <bpmn:documentation>procesId: OTC-02
+niveau: L3
+type: as-is
+eigenaar: Customer service manager
+versie: 0.9
+status: as-is
+gevalideerd: 2026-09-24, workshop met customer service en planning</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_otc_02_as_is">
+      <bpmn:lane id="Lane_cs" name="Customer service">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_enter</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_cfg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_confirm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_mailcredit</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_am" name="Accountmanager">
+        <bpmn:flowNodeRef>t_excel</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_promise</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_credit" name="Credit controller">
+        <bpmn:flowNodeRef>t_check</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_ok</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_block</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end_blocked</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_planner" name="Planner">
+        <bpmn:flowNodeRef>t_plan</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_erp" name="ERP">
+        <bpmn:flowNodeRef>t_release</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Order ontvangen (mail, telefoon, EDI)">
+      <bpmn:outgoing>Flow_0</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="Msg_start" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="t_enter" name="Order manueel invoeren">
+      <bpmn:incoming>Flow_0</bpmn:incoming>
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="g_cfg" name="Klantspecifieke uitvoering?">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_excel" name="Configuratie in Excel uitwerken">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="t_promise" name="Leverdatum telefonisch beloven">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sendTask id="t_confirm" name="Orderbevestiging versturen">
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:userTask id="t_mailcredit" name="Kredietcheck per mail aanvragen">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="t_check" name="Krediet manueel controleren">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="g_ok" name="Krediet in orde?">
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_block" name="Order blokkeren en sales verwittigen">
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="end_blocked" name="Order geblokkeerd na bevestiging">
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="t_release" name="Order voor planning vrijgeven">
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+      <bpmn:outgoing>Flow_12</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="t_plan" name="Order inplannen en datum stil aanpassen">
+      <bpmn:incoming>Flow_12</bpmn:incoming>
+      <bpmn:outgoing>Flow_13</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="end" name="Order ingepland">
+      <bpmn:incoming>Flow_13</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0" sourceRef="start" targetRef="t_enter" />
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="t_enter" targetRef="g_cfg" />
+    <bpmn:sequenceFlow id="Flow_2" name="ja" sourceRef="g_cfg" targetRef="t_excel" />
+    <bpmn:sequenceFlow id="Flow_3" name="nee" sourceRef="g_cfg" targetRef="t_promise" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="t_excel" targetRef="t_promise" />
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="t_promise" targetRef="t_confirm" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="t_confirm" targetRef="t_mailcredit" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="t_mailcredit" targetRef="t_check" />
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="t_check" targetRef="g_ok" />
+    <bpmn:sequenceFlow id="Flow_9" name="ja" sourceRef="g_ok" targetRef="t_release" />
+    <bpmn:sequenceFlow id="Flow_10" name="nee" sourceRef="g_ok" targetRef="t_block" />
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="t_block" targetRef="end_blocked" />
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="t_release" targetRef="t_plan" />
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="t_plan" targetRef="end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_otc_02_as_is">
+    <bpmndi:BPMNPlane id="Plane_otc_02_as_is" bpmnElement="Collab_otc_02_as_is">
+      <bpmndi:BPMNShape id="Pool_otc_02_as_is_di" bpmnElement="Pool_otc_02_as_is" isHorizontal="true">
+        <dc:Bounds x="0" y="0" width="1990" height="650" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_cs_di" bpmnElement="Lane_cs" isHorizontal="true">
+        <dc:Bounds x="34" y="0" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_am_di" bpmnElement="Lane_am" isHorizontal="true">
+        <dc:Bounds x="34" y="130" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_credit_di" bpmnElement="Lane_credit" isHorizontal="true">
+        <dc:Bounds x="34" y="260" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_planner_di" bpmnElement="Lane_planner" isHorizontal="true">
+        <dc:Bounds x="34" y="390" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_erp_di" bpmnElement="Lane_erp" isHorizontal="true">
+        <dc:Bounds x="34" y="520" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="105" y="47" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_enter_di" bpmnElement="t_enter">
+        <dc:Bounds x="222" y="32" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_cfg_di" bpmnElement="g_cfg" isMarkerVisible="true">
+        <dc:Bounds x="414" y="40" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_excel_di" bpmnElement="t_excel">
+        <dc:Bounds x="538" y="162" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_promise_di" bpmnElement="t_promise">
+        <dc:Bounds x="696" y="162" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_confirm_di" bpmnElement="t_confirm">
+        <dc:Bounds x="854" y="32" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_mailcredit_di" bpmnElement="t_mailcredit">
+        <dc:Bounds x="1012" y="32" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_check_di" bpmnElement="t_check">
+        <dc:Bounds x="1170" y="292" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_ok_di" bpmnElement="g_ok" isMarkerVisible="true">
+        <dc:Bounds x="1362" y="300" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_block_di" bpmnElement="t_block">
+        <dc:Bounds x="1486" y="292" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_blocked_di" bpmnElement="end_blocked">
+        <dc:Bounds x="1685" y="307" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_release_di" bpmnElement="t_release">
+        <dc:Bounds x="1486" y="552" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_plan_di" bpmnElement="t_plan">
+        <dc:Bounds x="1644" y="422" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_di" bpmnElement="end">
+        <dc:Bounds x="1843" y="437" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0_di" bpmnElement="Flow_0">
+        <di:waypoint x="141" y="65" />
+        <di:waypoint x="222" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="340" y="65" />
+        <di:waypoint x="414" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="439" y="90" />
+        <di:waypoint x="439" y="195" />
+        <di:waypoint x="538" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="464" y="65" />
+        <di:waypoint x="755" y="65" />
+        <di:waypoint x="755" y="162" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="656" y="195" />
+        <di:waypoint x="696" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="814" y="195" />
+        <di:waypoint x="834" y="195" />
+        <di:waypoint x="834" y="65" />
+        <di:waypoint x="854" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="972" y="65" />
+        <di:waypoint x="1012" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7">
+        <di:waypoint x="1130" y="65" />
+        <di:waypoint x="1150" y="65" />
+        <di:waypoint x="1150" y="325" />
+        <di:waypoint x="1170" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8">
+        <di:waypoint x="1288" y="325" />
+        <di:waypoint x="1362" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9">
+        <di:waypoint x="1387" y="350" />
+        <di:waypoint x="1387" y="585" />
+        <di:waypoint x="1486" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10">
+        <di:waypoint x="1412" y="325" />
+        <di:waypoint x="1486" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11">
+        <di:waypoint x="1604" y="325" />
+        <di:waypoint x="1685" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12">
+        <di:waypoint x="1604" y="585" />
+        <di:waypoint x="1624" y="585" />
+        <di:waypoint x="1624" y="455" />
+        <di:waypoint x="1644" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13">
+        <di:waypoint x="1762" y="455" />
+        <di:waypoint x="1843" y="455" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

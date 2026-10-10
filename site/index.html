@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corvent Process House — procesarchitectuur case</title>
+  <meta name="description" content="Van een procesboom in PowerPoint naar een beheerde procescatalogus met eigenaars, één modelleerstandaard die automatisch getoetst wordt, en een referentiemodel voor order-to-cash. Fictieve organisatie.">
+  <meta property="og:title" content="Corvent Process House — procesarchitectuur die gebruikt wordt">
+  <meta property="og:description" content="Procescatalogus, modelleerstandaard en governance + referentiemodel order-to-cash. Independent portfolio case, fictional organisation.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://phlppgdfry.github.io/manufacturing-process-architecture-case/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./">Corvent Process House</a>
+      <nav aria-label="Secties">
+        <a href="#uitdaging">Uitdaging</a>
+        <a href="#architectuur">Architectuur</a>
+        <a href="#standaard">Standaard</a>
+        <a href="#model">Model</a>
+        <a href="#governance">Governance</a>
+        <a href="demo/?tour">Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <p class="eyebrow">Independent portfolio case · fictional organisation · Philippe Godfroy</p>
+      <h1>Procesarchitectuur die gebruikt wordt</h1>
+      <p class="lede">Van een procesboom in PowerPoint naar een beheerde procescatalogus met eigenaars, één modelleerstandaard die automatisch getoetst wordt, en een eerste referentiemodel voor order-to-cash.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="demo/?tour">Open demo (rondleiding 2 min)</a>
+        <a class="btn" href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/CASE_STUDY.md">Lees de case study</a>
+        <a class="btn" href="#architectuur">Bekijk de architectuur</a>
+        <a class="btn" href="https://github.com/phlppgdfry/manufacturing-process-architecture-case">Bekijk op GitHub</a>
+      </div>
+    </section>
+
+    <section id="uitdaging" class="wrap section">
+      <h2>De uitdaging</h2>
+      <p class="measure">Corvent Industries, een fictieve maakindustrie van ±950 medewerkers, liet een procesarchitectuur tekenen op capabilities en end-to-end processen. Een jaar later gebruikt niemand die, en over zes weken vraagt het ERP-project welke versie van een proces de juiste is.</p>
+      <div class="grid cards-4">
+        <article class="card"><span class="chip warn">Eigenaarschap</span><h3>8 van 41 processen zonder eigenaar</h3><p>Het hele E2E-proces issue-to-resolution heeft er ook geen.</p></article>
+        <article class="card"><span class="chip warn">Standaard</span><h3>Vier analisten, vier stijlen</h3><p>Reviews gaan over smaak; modellen zijn niet te vergelijken.</p></article>
+        <article class="card"><span class="chip warn">Bron</span><h3>8 vrijgegeven modellen, 7 in oude formaten</h3><p>Visio, PowerPoint en Word; het ERP-team krijgt tegenstrijdige versies.</p></article>
+        <article class="card"><span class="chip risk">Overdracht</span><h3>Niemand is eigenaar van de leverdatum</h3><p>Sales belooft, planning wijzigt; OTIF 78% (illustratief).</p></article>
+      </div>
+    </section>
+
+    <section id="rol" class="wrap section">
+      <h2>Mijn rol in deze case: de process architect, eerste 90 dagen</h2>
+      <div class="grid cards-3">
+        <article class="card"><h3>Structureren, niet hertekenen</h3><p>Capability map naast de bestaande procesboom; catalogus met verplichte velden, uit één bron gegenereerd.</p></article>
+        <article class="card"><h3>Standaard toetsbaar maken</h3><p>Conventie van drie pagina's, checklist van 18 regels, waarvan 13 automatisch in CI.</p></article>
+        <article class="card"><h3>Zelf modelleren</h3><p>Order-to-cash van L1 tot L3, as-is met pijnpunten, to-be met uitzonderingen.</p></article>
+        <article class="card"><h3>Coachen</h3><p>Review van een analistenmodel: vijf punten, elk als vraag; de herwerkte versie haalt alle checks.</p></article>
+        <article class="card"><h3>Governance inrichten</h3><p>Rollen, RACI, procesraad en een wijzigingsflow die zelf een getoetst proces is.</p></article>
+        <article class="card"><h3>Inzicht naar verbetering</h3><p>Vijf initiatieven, gekoppeld aan proces-ID, KPI en eigenaar.</p></article>
+      </div>
+    </section>
+
+    <section id="journey" class="wrap section">
+      <h2>De journey</h2>
+      <ol class="journey">
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/01-frame/90-dagenplan.md"><span class="step-no">1</span>Frame</a></li>
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/02-architecture/capability-map.md"><span class="step-no">2</span>Structure</a></li>
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/03-standards/modelleerconventie.md"><span class="step-no">3</span>Standardise</a></li>
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/04-reference-model/order-to-cash.md"><span class="step-no">4</span>Model</a></li>
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/05-review/review-otc-03.md"><span class="step-no">5</span>Review</a></li>
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/06-governance/governance-model.md"><span class="step-no">6</span>Govern</a></li>
+        <li><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/07-improvement/verbeterportfolio.md"><span class="step-no">7</span>Improve</a></li>
+      </ol>
+    </section>
+
+    <section id="architectuur" class="wrap section">
+      <h2>Architectuur: proceshuis en capabilities</h2>
+      <p class="measure">De bestaande procesboom blijft de basis. Daarnaast komt een capability map: wat Corvent moet kunnen, los van wie het doet. Elk L2-proces wijst naar een capability en naar de systemen die het ondersteunen.</p>
+      <figure class="diagram">
+        <img src="assets/models/proceshuis.svg" alt="Proceshuis met drie lagen: sturend (STE, DTC), kern (IDP, OTC, PTP, PRP, ITR) en ondersteunend (PTM, HTR, RTR). ITR heeft geen eigenaar." width="1100" height="392">
+        <figcaption>L0/L1: tien end-to-end processen. Rode stippellijn = geen eigenaar.</figcaption>
+      </figure>
+      <figure class="diagram">
+        <img src="assets/models/capability-map.svg" alt="Capability map met 11 domeinen en 35 capabilities; Leverbelofte staat rood, onder meer Klantenservice en Krediet en debiteuren staan oranje." loading="lazy" width="1224" height="604">
+        <figcaption>Groen = goed ondersteund, oranje = deels of Excel, rood = niet ondersteund. <em>Leverbelofte</em> is rood, en precies daar zit het eigenaarsconflict.</figcaption>
+      </figure>
+    </section>
+
+    <section id="standaard" class="wrap section">
+      <h2>Eén standaard, automatisch getoetst</h2>
+      <div class="grid cards-3">
+        <article class="card"><span class="chip ok">Conventie</span><h3>±15 BPMN-elementen</h3><p>Geen inclusive gateways: die leest bijna iedereen anders. Eén naamregel: object + werkwoord, zoals in de catalogus.</p></article>
+        <article class="card"><span class="chip ok">Checklist</span><h3>18 regels met ID</h3><p>R01–R13 automatisch, M01–M05 voor de reviewer: voor wie is het model, waar zijn de overdrachten?</p></article>
+        <article class="card"><span class="chip ok">In CI</span><h3>check_models.py + 17 tests</h3><p>Elke push toetst alle modellen en de catalogus. Werkversies (<code>*.draft.bpmn</code>) mogen nog falen.</p></article>
+      </div>
+      <p><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/03-standards/modelleerconventie.md">Modelleerconventie</a> · <a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/03-standards/kwaliteitschecklist.md">Kwaliteitschecklist</a> · <a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/scripts/check_models.py">check_models.py</a></p>
+    </section>
+
+    <section id="model" class="wrap section">
+      <h2>Referentiemodel: OTC-02 Order aanvaarden</h2>
+      <p class="measure">As-is met vijf genummerde pijnpunten (rood); de to-be toont welke taak welk pijnpunt oplost (groen). De leverdatum verhuist naar OTC-03, met één eigenaar.</p>
+      <div class="toggle" role="group" aria-label="Kies model">
+        <button type="button" class="btn" data-show="asis" aria-pressed="true">As-is</button>
+        <button type="button" class="btn" data-show="tobe" aria-pressed="false">To-be</button>
+      </div>
+      <figure class="diagram" data-model="asis">
+        <img src="assets/models/otc-02-as-is.svg" alt="As-is: order manueel ingevoerd, leverdatum telefonisch beloofd (P1), bevestiging vóór kredietcheck (P4), krediet manueel gecontroleerd (P2), datum stil aangepast door planner (P3), configuratie in Excel (P5)." loading="lazy" width="2052" height="664">
+        <figcaption>As-is, gevalideerd met customer service en planning.</figcaption>
+      </figure>
+      <figure class="diagram hidden" data-model="tobe">
+        <img src="assets/models/otc-02-to-be.svg" alt="To-be: order geregistreerd, configuratie in productconfigurator, kredietlimiet automatisch gecontroleerd, uitzondering beoordeeld door credit controller met timer van 4 werkuren, order aanvaard en naar OTC-03." loading="lazy" width="1894" height="534">
+        <figcaption>To-be v1.0: drie uitzonderingspaden, waaronder een non-interrupting timer.</figcaption>
+      </figure>
+    </section>
+
+    <section id="review" class="wrap section">
+      <h2>Coachen: van 9 bevindingen naar 0</h2>
+      <div class="grid cards-3">
+        <article class="card"><span class="chip risk">Draft</span><h3>Automatisch rapport</h3><p>Losse draad, inclusive gateway, een persoon als lane, geen attributen: 9 bevindingen op 7 regels.</p></article>
+        <article class="card"><span class="chip warn">Review</span><h3>Vijf punten, elk als vraag</h3><p>"Wat gebeurt er als de datum niet haalbaar is? Welke rol beslist?" De vorm lost de analist zelf op.</p></article>
+        <article class="card"><span class="chip ok">v1.0</span><h3>Herwerkte versie: 0 bevindingen</h3><p>Het eigenaarsconflict gaat naar de procesraad: dat kan geen model oplossen.</p></article>
+      </div>
+      <p><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/05-review/review-otc-03.md">Lees de volledige review</a> · <a href="demo/?tour">Zie het in de demo</a></p>
+    </section>
+
+    <section id="governance" class="wrap section">
+      <h2>Governance: wie beslist</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Activiteit</th><th>Procesraad</th><th>L1-eigenaar</th><th>L2-eigenaar</th><th>Analist</th><th>Architect</th></tr></thead>
+          <tbody>
+            <tr><td>Wijziging binnen één L2 vrijgeven</td><td>—</td><td>I</td><td><strong>A</strong></td><td>R</td><td>C</td></tr>
+            <tr><td>Wijziging op L1 of aan een overdracht</td><td><strong>A</strong></td><td>R</td><td>C</td><td>C</td><td>R</td></tr>
+            <tr><td>Model reviewen tegen de conventie</td><td>—</td><td>—</td><td>I</td><td>C</td><td><strong>A/R</strong></td></tr>
+            <tr><td>Catalogus en conventie beheren</td><td>I</td><td>I</td><td>I</td><td>C</td><td><strong>A/R</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="diagram" style="margin-top:16px">
+        <img src="assets/models/ste-04-proceswijziging.svg" alt="Wijzigingsflow: steward registreert verzoek, analist past model aan, automatische check, architect reviewt, eigenaar of procesraad beslist, nieuwe versie gepubliceerd." loading="lazy" width="1894" height="794">
+        <figcaption>De wijzigingsflow is zelf een proces in de catalogus (STE-04) en haalt de checks van zijn eigen standaard.</figcaption>
+      </figure>
+    </section>
+
+    <section id="resultaat" class="wrap section">
+      <h2>Doelen</h2>
+      <div class="grid cards-4">
+        <article class="card"><p>L2 met eigenaar</p><p class="kpi-value">33 → 41</p><p>start → 12 maanden</p></article>
+        <article class="card"><p>L2 vrijgegeven</p><p class="kpi-value">8 → 30</p><p>start → 12 maanden</p></article>
+        <article class="card"><p>Orders bevestigd binnen 4 werkuren</p><p class="kpi-value">42% → 85%</p><p>initiatief I-02</p></article>
+        <article class="card"><p>Manuele kredietcheck</p><p class="kpi-value">31% → ≤10%</p><p>initiatief I-01</p></article>
+      </div>
+      <p class="note">Illustrative assumptions — not real company data.</p>
+    </section>
+
+    <section id="evidence" class="wrap section">
+      <h2>Wat deze case aantoont</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Vereiste</th><th>Bewijs</th></tr></thead>
+          <tbody>
+            <tr><td>Procescatalogus beheren</td><td>catalogus uit één JSON-bron, dekking per L1, werklijst van governance-gaten</td></tr>
+            <tr><td>Procesarchitectuur op capabilities en E2E</td><td>capability map met heatmap, procesboom L0–L4, overdrachten</td></tr>
+            <tr><td>Standaarden voor modellering en documentatie</td><td>conventie, documentatiesjabloon, ADR over het palet</td></tr>
+            <tr><td>Kwaliteit en consistentie bewaken</td><td>18 regels, 13 als code, 17 tests, in CI</td></tr>
+            <tr><td>As-is en to-be modelleren in BPMN</td><td>order-to-cash L1 → L3, geldige BPMN 2.0</td></tr>
+            <tr><td>Analisten coachen</td><td>review met vijf punten, onboarding-kit, review-ritme</td></tr>
+            <tr><td>Procesgovernance</td><td>RACI, statussen, procesraad met beslissingslog</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/EVIDENCE.md">Volledige mapping, inclusief wat niet geclaimd wordt</a> · Vacature-lenzen: <a href="for/process-architect/">process architect</a> · <a href="for/process-analyst/">process analyst</a></p>
+    </section>
+
+    <section id="documenten" class="wrap section">
+      <h2>Documenten</h2>
+      <div class="grid cards-3">
+        <article class="card"><h3><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/START-HERE.md">Start here</a></h3><p>Paden van 2, 5 en 15 minuten.</p></article>
+        <article class="card"><h3><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/02-architecture/procescatalogus.md">Procescatalogus</a></h3><p>41 L2-processen met eigenaar, status en capability.</p></article>
+        <article class="card"><h3><a href="https://github.com/phlppgdfry/manufacturing-process-architecture-case/blob/main/docs/06-governance/procesraad.md">Procesraad</a></h3><p>Agenda's, beslissingslog, voorstel over de leverdatum.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Independent portfolio case study based on a fictional organisation. It contains no confidential information from any real employer or the hiring company. All figures are illustrative assumptions — not real company data.</p>
+      <p>Philippe Godfroy · <a href="https://github.com/phlppgdfry">GitHub</a> · Bijgewerkt 2026-10-10</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll("[data-show]").forEach((btn) => btn.addEventListener("click", () => {
+      document.querySelectorAll("[data-show]").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+      document.querySelectorAll("[data-model]").forEach((f) => f.classList.toggle("hidden", f.dataset.model !== btn.dataset.show));
+    }));
+  </script>
+</body>
+</html>

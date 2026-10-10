@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -12 1894 794" width="1894" height="794" role="img" aria-label="STE-04 Proceswijziging doorvoeren — v1.0" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b4652"/></marker></defs>
+<rect x="0" y="0" width="1892" height="780" fill="#ffffff" stroke="#3b4652"/>
+<rect x="34" y="0" width="1858" height="130" fill="#ffffff" stroke="#c9d1db"/>
+<text transform="translate(21,65.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Process steward</text>
+<rect x="34" y="130" width="1858" height="130" fill="#f4f6f9" stroke="#c9d1db"/>
+<text transform="translate(14,195.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Business process</text>
+<text transform="translate(28,195.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">analyst</text>
+<rect x="34" y="260" width="1858" height="130" fill="#ffffff" stroke="#c9d1db"/>
+<text transform="translate(21,325.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Process architect</text>
+<rect x="34" y="390" width="1858" height="130" fill="#f4f6f9" stroke="#c9d1db"/>
+<text transform="translate(21,455.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Proceseigenaar</text>
+<rect x="34" y="520" width="1858" height="130" fill="#ffffff" stroke="#c9d1db"/>
+<text transform="translate(21,585.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Procesraad</text>
+<rect x="34" y="650" width="1858" height="130" fill="#f4f6f9" stroke="#c9d1db"/>
+<text transform="translate(21,715.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Procescatalogus</text>
+<line x1="34" y1="0" x2="34" y2="780" stroke="#3b4652"/>
+<path d="M141,65 L222,65" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M340,65 L360,65 L360,195 L380,195" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M439,228 L439,715 L538,715" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M656,715 L730,715" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M780,715 L913,715 L913,358" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="788" y="709" text-anchor="start" font-size="11" fill="#5b6675">ja</text>
+<path d="M755,690 L755,195 L498,195" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="760" y="682" text-anchor="start" font-size="11" fill="#5b6675">nee</text>
+<path d="M972,325 L1046,325" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1071,350 L1071,585 L1170,585" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="1076" y="366" text-anchor="start" font-size="11" fill="#5b6675">ja</text>
+<path d="M1096,325 L1229,325 L1229,422" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="1104" y="319" text-anchor="start" font-size="11" fill="#5b6675">nee</text>
+<path d="M1288,585 L1362,585" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1412,585 L1527,585" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="1420" y="579" text-anchor="start" font-size="11" fill="#5b6675">nee</text>
+<path d="M1387,610 L1387,715 L1486,715" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="1392" y="626" text-anchor="start" font-size="11" fill="#5b6675">ja</text>
+<path d="M1288,455 L1466,455 L1466,715 L1486,715" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1604,715 L1685,715" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<circle cx="123" cy="65" r="18.0" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="123" y="97" text-anchor="middle" fill="#1b2430">Wijziging nodig</text>
+<text x="123" y="110" text-anchor="middle" fill="#1b2430">(project, audit of</text>
+<text x="123" y="123" text-anchor="middle" fill="#1b2430">verbetering)</text>
+<rect x="222" y="32" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="334" y="45" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="281" y="63" text-anchor="middle" font-size="12" fill="#1b2430">Wijzigingsverzoek</text>
+<text x="281" y="77" text-anchor="middle" font-size="12" fill="#1b2430">registreren</text>
+<rect x="380" y="162" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="492" y="175" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="439" y="186" text-anchor="middle" font-size="12" fill="#1b2430">Model volgens</text>
+<text x="439" y="200" text-anchor="middle" font-size="12" fill="#1b2430">conventie</text>
+<text x="439" y="214" text-anchor="middle" font-size="12" fill="#1b2430">aanpassen</text>
+<rect x="538" y="682" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="650" y="695" text-anchor="end" font-size="9" fill="#5b6675">service</text>
+<text x="597" y="713" text-anchor="middle" font-size="12" fill="#1b2430">Model automatisch</text>
+<text x="597" y="727" text-anchor="middle" font-size="12" fill="#1b2430">toetsen</text>
+<path d="M755,690 L780,715 L755,740 L730,715 z" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<path d="M747,707 L763,723 M763,707 L747,723" stroke="#1b2430" stroke-width="2.5"/>
+<text x="745" y="675" text-anchor="end" fill="#1b2430">Alle checks</text>
+<text x="745" y="688" text-anchor="end" fill="#1b2430">geslaagd?</text>
+<rect x="854" y="292" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="966" y="305" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="913" y="330" text-anchor="middle" font-size="12" fill="#1b2430">Model reviewen</text>
+<path d="M1071,300 L1096,325 L1071,350 L1046,325 z" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<path d="M1063,317 L1079,333 M1079,317 L1063,333" stroke="#1b2430" stroke-width="2.5"/>
+<text x="1061" y="272" text-anchor="end" fill="#1b2430">Raakt L1 of</text>
+<text x="1061" y="285" text-anchor="end" fill="#1b2430">een</text>
+<text x="1061" y="298" text-anchor="end" fill="#1b2430">overdracht?</text>
+<rect x="1170" y="422" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1282" y="435" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="1229" y="453" text-anchor="middle" font-size="12" fill="#1b2430">Wijziging</text>
+<text x="1229" y="467" text-anchor="middle" font-size="12" fill="#1b2430">goedkeuren</text>
+<rect x="1170" y="552" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1282" y="565" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="1229" y="576" text-anchor="middle" font-size="12" fill="#1b2430">Wijziging in</text>
+<text x="1229" y="590" text-anchor="middle" font-size="12" fill="#1b2430">procesraad</text>
+<text x="1229" y="604" text-anchor="middle" font-size="12" fill="#1b2430">beslissen</text>
+<path d="M1387,560 L1412,585 L1387,610 L1362,585 z" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<path d="M1379,577 L1395,593 M1395,577 L1379,593" stroke="#1b2430" stroke-width="2.5"/>
+<text x="1377" y="558" text-anchor="end" fill="#1b2430">Goedgekeurd?</text>
+<circle cx="1545" cy="585" r="18.0" fill="#fff" stroke="#1b2430" stroke-width="3"/>
+<text x="1569" y="583" fill="#1b2430">Wijziging</text>
+<text x="1569" y="596" fill="#1b2430">afgewezen</text>
+<rect x="1486" y="682" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1598" y="695" text-anchor="end" font-size="9" fill="#5b6675">service</text>
+<text x="1545" y="713" text-anchor="middle" font-size="12" fill="#1b2430">Nieuwe versie</text>
+<text x="1545" y="727" text-anchor="middle" font-size="12" fill="#1b2430">publiceren</text>
+<circle cx="1703" cy="715" r="18.0" fill="#fff" stroke="#1b2430" stroke-width="3"/>
+<text x="1727" y="713" fill="#1b2430">Versie released,</text>
+<text x="1727" y="726" fill="#1b2430">vorige versie</text>
+<text x="1727" y="739" fill="#1b2430">retired</text>
+</svg>

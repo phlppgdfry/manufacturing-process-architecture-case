@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1106 184" width="1106" height="184" role="img" aria-label="OTC Order-to-cash als waardeketen" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12">
+<rect width="1106" height="184" fill="#ffffff"/>
+<text x="16" y="24" font-weight="700" font-size="15" fill="#1b2430">OTC · Order-to-cash — Van klantorder tot ontvangen betaling (L1 → L2)</text>
+<text x="16" y="44" font-size="12" fill="#5b6675">Eigenaar L1: Commercial director · kleur = status · stippellijn = geen eigenaar</text>
+<path d="M16,58 L186,58 L204,95.0 L186,132 L16,132 L16,95.0 z" fill="#ffffff" stroke="#9a5b00" stroke-width="2"/>
+<text x="107.0" y="84" text-anchor="middle" font-weight="700" fill="#1b2430">OTC-01</text>
+<text x="107.0" y="102" text-anchor="middle" fill="#1b2430">Offerte opstellen</text>
+<text x="107.0" y="150" text-anchor="middle" font-size="11" fill="#9a5b00">draft</text>
+<path d="M192,58 L362,58 L380,95.0 L362,132 L192,132 L210,95.0 z" fill="#ffffff" stroke="#1f4e79" stroke-width="2"/>
+<text x="283.0" y="84" text-anchor="middle" font-weight="700" fill="#1b2430">OTC-02</text>
+<text x="283.0" y="102" text-anchor="middle" fill="#1b2430">Order aanvaarden</text>
+<text x="283.0" y="150" text-anchor="middle" font-size="11" fill="#1f4e79">in review</text>
+<path d="M368,58 L538,58 L556,95.0 L538,132 L368,132 L386,95.0 z" fill="#ffffff" stroke="#1f4e79" stroke-width="2" stroke-dasharray="6 3"/>
+<text x="459.0" y="84" text-anchor="middle" font-weight="700" fill="#1b2430">OTC-03</text>
+<text x="459.0" y="102" text-anchor="middle" fill="#1b2430">Leverdatum</text>
+<text x="459.0" y="116" text-anchor="middle" fill="#1b2430">bevestigen</text>
+<text x="459.0" y="150" text-anchor="middle" font-size="11" fill="#1f4e79">in review</text>
+<path d="M544,58 L714,58 L732,95.0 L714,132 L544,132 L562,95.0 z" fill="#ffffff" stroke="#9a5b00" stroke-width="2"/>
+<text x="635.0" y="84" text-anchor="middle" font-weight="700" fill="#1b2430">OTC-04</text>
+<text x="635.0" y="102" text-anchor="middle" fill="#1b2430">Order uitleveren</text>
+<text x="635.0" y="150" text-anchor="middle" font-size="11" fill="#9a5b00">draft</text>
+<path d="M720,58 L890,58 L908,95.0 L890,132 L720,132 L738,95.0 z" fill="#ffffff" stroke="#9a5b00" stroke-width="2"/>
+<text x="811.0" y="84" text-anchor="middle" font-weight="700" fill="#1b2430">OTC-05</text>
+<text x="811.0" y="102" text-anchor="middle" fill="#1b2430">Klant factureren</text>
+<text x="811.0" y="150" text-anchor="middle" font-size="11" fill="#9a5b00">draft</text>
+<path d="M896,58 L1066,58 L1084,95.0 L1066,132 L896,132 L914,95.0 z" fill="#ffffff" stroke="#9a5b00" stroke-width="2"/>
+<text x="987.0" y="84" text-anchor="middle" font-weight="700" fill="#1b2430">OTC-06</text>
+<text x="987.0" y="102" text-anchor="middle" fill="#1b2430">Betaling opvolgen</text>
+<text x="987.0" y="150" text-anchor="middle" font-size="11" fill="#9a5b00">draft</text>
+</svg>

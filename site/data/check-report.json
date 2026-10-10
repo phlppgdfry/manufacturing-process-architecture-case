@@ -1,0 +1,167 @@
+{
+  "asOf": "2026-10-10",
+  "convention": "docs/03-standards/kwaliteitschecklist.md",
+  "models": [
+    {
+      "file": "docs/04-reference-model/bpmn/otc-02-as-is.bpmn",
+      "draft": false,
+      "procesId": "OTC-02",
+      "type": "as-is",
+      "title": "OTC-02 Order aanvaarden — as-is (vandaag)",
+      "findings": [],
+      "rules": []
+    },
+    {
+      "file": "docs/04-reference-model/bpmn/otc-02-to-be.bpmn",
+      "draft": false,
+      "procesId": "OTC-02",
+      "type": "to-be",
+      "title": "OTC-02 Order aanvaarden — to-be v1.0",
+      "findings": [],
+      "rules": []
+    },
+    {
+      "file": "docs/05-review/bpmn/otc-03-to-be.bpmn",
+      "draft": false,
+      "procesId": "OTC-03",
+      "type": "to-be",
+      "title": "OTC-03 Leverdatum bevestigen — to-be v1.0 (na review)",
+      "findings": [],
+      "rules": []
+    },
+    {
+      "file": "docs/05-review/bpmn/otc-03.draft.bpmn",
+      "draft": true,
+      "procesId": "",
+      "type": "",
+      "title": "Leverdatum (draft analist)",
+      "findings": [
+        {
+          "rule": "R02",
+          "element": "Datum aanpassen",
+          "message": "pad eindigt niet in een eindevent (losse draad)"
+        },
+        {
+          "rule": "R03",
+          "element": "Capaciteitscheck",
+          "message": "taaknaam is geen 'object + werkwoord' uit de werkwoordenlijst"
+        },
+        {
+          "rule": "R03",
+          "element": "Mail naar klant",
+          "message": "taaknaam is geen 'object + werkwoord' uit de werkwoordenlijst"
+        },
+        {
+          "rule": "R04",
+          "element": "Check",
+          "message": "splitsende gateway heeft geen vraag als naam"
+        },
+        {
+          "rule": "R05",
+          "element": "Check",
+          "message": "2 uitgaande flow(s) zonder label"
+        },
+        {
+          "rule": "R06",
+          "element": "Check",
+          "message": "element 'inclusiveGateway' staat niet in het palet"
+        },
+        {
+          "rule": "R11",
+          "element": "Jan (planning)",
+          "message": "lane is geen rol of systeem uit de rollenlijst"
+        },
+        {
+          "rule": "R11",
+          "element": "Sales",
+          "message": "lane is geen rol of systeem uit de rollenlijst"
+        },
+        {
+          "rule": "R09",
+          "element": "",
+          "message": "verplichte attributen ontbreken: procesId, niveau, type, eigenaar, versie, status"
+        }
+      ],
+      "rules": [
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R09",
+        "R11"
+      ]
+    },
+    {
+      "file": "docs/06-governance/bpmn/ste-04-proceswijziging.bpmn",
+      "draft": false,
+      "procesId": "STE-04",
+      "type": "to-be",
+      "title": "STE-04 Proceswijziging doorvoeren — v1.0",
+      "findings": [],
+      "rules": []
+    }
+  ],
+  "catalog": {
+    "errors": [],
+    "warnings": [
+      {
+        "rule": "C04",
+        "element": "STE-02",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "DTC-03",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "IDP-03",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "OTC-03",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "PTP-01",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "PRP-04",
+        "message": "reviewdatum 2026-09-30 verstreken"
+      },
+      {
+        "rule": "C04",
+        "element": "ITR-01",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "ITR-02",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "ITR-03",
+        "message": "geen eigenaar"
+      },
+      {
+        "rule": "C04",
+        "element": "ITR",
+        "message": "L1 zonder eigenaar"
+      }
+    ]
+  },
+  "summary": {
+    "models": 5,
+    "passing": 4,
+    "drafts": 1,
+    "catalogErrors": 0,
+    "catalogWarnings": 10
+  }
+}

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -12 2052 664" width="2052" height="664" role="img" aria-label="OTC-02 Order aanvaarden — as-is (vandaag)" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b4652"/></marker></defs>
+<rect x="0" y="0" width="2050" height="650" fill="#ffffff" stroke="#3b4652"/>
+<rect x="34" y="0" width="2016" height="130" fill="#ffffff" stroke="#c9d1db"/>
+<text transform="translate(21,65.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Customer service</text>
+<rect x="34" y="130" width="2016" height="130" fill="#f4f6f9" stroke="#c9d1db"/>
+<text transform="translate(21,195.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Accountmanager</text>
+<rect x="34" y="260" width="2016" height="130" fill="#ffffff" stroke="#c9d1db"/>
+<text transform="translate(21,325.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Credit controller</text>
+<rect x="34" y="390" width="2016" height="130" fill="#f4f6f9" stroke="#c9d1db"/>
+<text transform="translate(21,455.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">Planner</text>
+<rect x="34" y="520" width="2016" height="130" fill="#ffffff" stroke="#c9d1db"/>
+<text transform="translate(21,585.0) rotate(-90)" text-anchor="middle" font-weight="600" fill="#1b2430">ERP</text>
+<line x1="34" y1="0" x2="34" y2="650" stroke="#3b4652"/>
+<path d="M141,65 L222,65" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M340,65 L414,65" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M439,90 L439,195 L538,195" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="444" y="106" text-anchor="start" font-size="11" fill="#5b6675">ja</text>
+<path d="M464,65 L755,65 L755,162" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="472" y="59" text-anchor="start" font-size="11" fill="#5b6675">nee</text>
+<path d="M656,195 L696,195" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M814,195 L834,195 L834,65 L854,65" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M972,65 L1012,65" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1130,65 L1150,65 L1150,325 L1170,325" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1288,325 L1362,325" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1387,350 L1387,585 L1486,585" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="1392" y="366" text-anchor="start" font-size="11" fill="#5b6675">ja</text>
+<path d="M1412,325 L1486,325" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="1420" y="319" text-anchor="start" font-size="11" fill="#5b6675">nee</text>
+<path d="M1604,325 L1685,325" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1604,585 L1624,585 L1624,455 L1644,455" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M1762,455 L1843,455" fill="none" stroke="#3b4652" stroke-width="1.3" marker-end="url(#arrow)"/>
+<circle cx="123" cy="65" r="18.0" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<rect x="115" y="60" width="16" height="11" fill="none" stroke="#1b2430"/><path d="M115,60 L123,66 L131,60" fill="none" stroke="#1b2430"/>
+<text x="123" y="97" text-anchor="middle" fill="#1b2430">Order ontvangen</text>
+<text x="123" y="110" text-anchor="middle" fill="#1b2430">(mail, telefoon,</text>
+<text x="123" y="123" text-anchor="middle" fill="#1b2430">EDI)</text>
+<rect x="222" y="32" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="334" y="45" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="281" y="63" text-anchor="middle" font-size="12" fill="#1b2430">Order manueel</text>
+<text x="281" y="77" text-anchor="middle" font-size="12" fill="#1b2430">invoeren</text>
+<path d="M439,40 L464,65 L439,90 L414,65 z" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<path d="M431,57 L447,73 M447,57 L431,73" stroke="#1b2430" stroke-width="2.5"/>
+<text x="429" y="25" text-anchor="end" fill="#1b2430">Klantspecifieke</text>
+<text x="429" y="38" text-anchor="end" fill="#1b2430">uitvoering?</text>
+<rect x="538" y="162" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="650" y="175" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="597" y="193" text-anchor="middle" font-size="12" fill="#1b2430">Configuratie in</text>
+<text x="597" y="207" text-anchor="middle" font-size="12" fill="#1b2430">Excel uitwerken</text>
+<rect x="542" y="153" width="22" height="16" rx="8" fill="#a3312a"/><text x="553" y="165" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">P5</text>
+<rect x="696" y="162" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="808" y="175" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="755" y="186" text-anchor="middle" font-size="12" fill="#1b2430">Leverdatum</text>
+<text x="755" y="200" text-anchor="middle" font-size="12" fill="#1b2430">telefonisch</text>
+<text x="755" y="214" text-anchor="middle" font-size="12" fill="#1b2430">beloven</text>
+<rect x="700" y="153" width="22" height="16" rx="8" fill="#a3312a"/><text x="711" y="165" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">P1</text>
+<rect x="854" y="32" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="966" y="45" text-anchor="end" font-size="9" fill="#5b6675">send</text>
+<text x="913" y="63" text-anchor="middle" font-size="12" fill="#1b2430">Orderbevestiging</text>
+<text x="913" y="77" text-anchor="middle" font-size="12" fill="#1b2430">versturen</text>
+<rect x="858" y="23" width="22" height="16" rx="8" fill="#a3312a"/><text x="869" y="35" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">P4</text>
+<rect x="1012" y="32" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1124" y="45" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="1071" y="63" text-anchor="middle" font-size="12" fill="#1b2430">Kredietcheck per</text>
+<text x="1071" y="77" text-anchor="middle" font-size="12" fill="#1b2430">mail aanvragen</text>
+<rect x="1170" y="292" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1282" y="305" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="1229" y="323" text-anchor="middle" font-size="12" fill="#1b2430">Krediet manueel</text>
+<text x="1229" y="337" text-anchor="middle" font-size="12" fill="#1b2430">controleren</text>
+<rect x="1174" y="283" width="22" height="16" rx="8" fill="#a3312a"/><text x="1185" y="295" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">P2</text>
+<path d="M1387,300 L1412,325 L1387,350 L1362,325 z" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<path d="M1379,317 L1395,333 M1395,317 L1379,333" stroke="#1b2430" stroke-width="2.5"/>
+<text x="1377" y="285" text-anchor="end" fill="#1b2430">Krediet in</text>
+<text x="1377" y="298" text-anchor="end" fill="#1b2430">orde?</text>
+<rect x="1486" y="292" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1598" y="305" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="1545" y="316" text-anchor="middle" font-size="12" fill="#1b2430">Order blokkeren</text>
+<text x="1545" y="330" text-anchor="middle" font-size="12" fill="#1b2430">en sales</text>
+<text x="1545" y="344" text-anchor="middle" font-size="12" fill="#1b2430">verwittigen</text>
+<circle cx="1703" cy="325" r="18.0" fill="#fff" stroke="#1b2430" stroke-width="3"/>
+<text x="1727" y="323" fill="#1b2430">Order geblokkeerd</text>
+<text x="1727" y="336" fill="#1b2430">na bevestiging</text>
+<rect x="1486" y="552" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1598" y="565" text-anchor="end" font-size="9" fill="#5b6675">service</text>
+<text x="1545" y="576" text-anchor="middle" font-size="12" fill="#1b2430">Order voor</text>
+<text x="1545" y="590" text-anchor="middle" font-size="12" fill="#1b2430">planning</text>
+<text x="1545" y="604" text-anchor="middle" font-size="12" fill="#1b2430">vrijgeven</text>
+<rect x="1644" y="422" width="118" height="66" rx="9" fill="#fff" stroke="#1b2430" stroke-width="1.5"/>
+<text x="1756" y="435" text-anchor="end" font-size="9" fill="#5b6675">user</text>
+<text x="1703" y="446" text-anchor="middle" font-size="12" fill="#1b2430">Order inplannen</text>
+<text x="1703" y="460" text-anchor="middle" font-size="12" fill="#1b2430">en datum stil</text>
+<text x="1703" y="474" text-anchor="middle" font-size="12" fill="#1b2430">aanpassen</text>
+<rect x="1648" y="413" width="22" height="16" rx="8" fill="#a3312a"/><text x="1659" y="425" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">P3</text>
+<circle cx="1861" cy="455" r="18.0" fill="#fff" stroke="#1b2430" stroke-width="3"/>
+<text x="1885" y="453" fill="#1b2430">Order ingepland</text>
+</svg>

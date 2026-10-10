@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  convention:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tests of the modelling rules
+        run: python3 -m unittest discover -s tests -v
+      - name: Regenerate models, catalogue views and check report
+        run: |
+          python3 scripts/build_models.py
+          python3 scripts/build_catalog.py
+          python3 scripts/check_models.py --report site/data/check-report.json
+      - name: Generated files are up to date
+        run: git diff --exit-code
+      - name: Check links
+        run: python3 scripts/check-links.py

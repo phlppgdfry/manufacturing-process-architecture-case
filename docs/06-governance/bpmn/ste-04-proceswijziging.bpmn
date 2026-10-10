@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Defs_ste_04_proceswijziging" targetNamespace="https://github.com/phlppgdfry/manufacturing-process-architecture-case" exporter="build_models.py" exporterVersion="1">
+  <bpmn:collaboration id="Collab_ste_04_proceswijziging">
+    <bpmn:participant id="Pool_ste_04_proceswijziging" name="STE-04 Proceswijziging doorvoeren — v1.0" processRef="Process_ste_04_proceswijziging" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_ste_04_proceswijziging" name="STE-04 Proceswijziging doorvoeren — v1.0" isExecutable="false">
+    <bpmn:documentation>procesId: STE-04
+niveau: L3
+type: to-be
+eigenaar: COO
+versie: 1.0
+status: released
+besluit: procesraad #1, D-01</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_ste_04_proceswijziging">
+      <bpmn:lane id="Lane_steward" name="Process steward">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_request</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_analyst" name="Business process analyst">
+        <bpmn:flowNodeRef>t_model</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_architect" name="Process architect">
+        <bpmn:flowNodeRef>t_review</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_level</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_owner" name="Proceseigenaar">
+        <bpmn:flowNodeRef>t_approve</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_raad" name="Procesraad">
+        <bpmn:flowNodeRef>t_raad</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_ok</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end_rej</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_cat" name="Procescatalogus">
+        <bpmn:flowNodeRef>t_check</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_pass</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_release</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end_ok</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Wijziging nodig (project, audit of verbetering)">
+      <bpmn:outgoing>Flow_0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="t_request" name="Wijzigingsverzoek registreren">
+      <bpmn:incoming>Flow_0</bpmn:incoming>
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="t_model" name="Model volgens conventie aanpassen">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="t_check" name="Model automatisch toetsen">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="g_pass" name="Alle checks geslaagd?">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_review" name="Model reviewen">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="g_level" name="Raakt L1 of een overdracht?">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_approve" name="Wijziging goedkeuren">
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_12</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="t_raad" name="Wijziging in procesraad beslissen">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="g_ok" name="Goedgekeurd?">
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:endEvent id="end_rej" name="Wijziging afgewezen">
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="t_release" name="Nieuwe versie publiceren">
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+      <bpmn:incoming>Flow_12</bpmn:incoming>
+      <bpmn:outgoing>Flow_13</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="end_ok" name="Versie released, vorige versie retired">
+      <bpmn:incoming>Flow_13</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0" sourceRef="start" targetRef="t_request" />
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="t_request" targetRef="t_model" />
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="t_model" targetRef="t_check" />
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="t_check" targetRef="g_pass" />
+    <bpmn:sequenceFlow id="Flow_4" name="ja" sourceRef="g_pass" targetRef="t_review" />
+    <bpmn:sequenceFlow id="Flow_5" name="nee" sourceRef="g_pass" targetRef="t_model" />
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="t_review" targetRef="g_level" />
+    <bpmn:sequenceFlow id="Flow_7" name="ja" sourceRef="g_level" targetRef="t_raad" />
+    <bpmn:sequenceFlow id="Flow_8" name="nee" sourceRef="g_level" targetRef="t_approve" />
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="t_raad" targetRef="g_ok" />
+    <bpmn:sequenceFlow id="Flow_10" name="nee" sourceRef="g_ok" targetRef="end_rej" />
+    <bpmn:sequenceFlow id="Flow_11" name="ja" sourceRef="g_ok" targetRef="t_release" />
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="t_approve" targetRef="t_release" />
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="t_release" targetRef="end_ok" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_ste_04_proceswijziging">
+    <bpmndi:BPMNPlane id="Plane_ste_04_proceswijziging" bpmnElement="Collab_ste_04_proceswijziging">
+      <bpmndi:BPMNShape id="Pool_ste_04_proceswijziging_di" bpmnElement="Pool_ste_04_proceswijziging" isHorizontal="true">
+        <dc:Bounds x="0" y="0" width="1832" height="780" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_steward_di" bpmnElement="Lane_steward" isHorizontal="true">
+        <dc:Bounds x="34" y="0" width="1798" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_analyst_di" bpmnElement="Lane_analyst" isHorizontal="true">
+        <dc:Bounds x="34" y="130" width="1798" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_architect_di" bpmnElement="Lane_architect" isHorizontal="true">
+        <dc:Bounds x="34" y="260" width="1798" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_owner_di" bpmnElement="Lane_owner" isHorizontal="true">
+        <dc:Bounds x="34" y="390" width="1798" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_raad_di" bpmnElement="Lane_raad" isHorizontal="true">
+        <dc:Bounds x="34" y="520" width="1798" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_cat_di" bpmnElement="Lane_cat" isHorizontal="true">
+        <dc:Bounds x="34" y="650" width="1798" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="105" y="47" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_request_di" bpmnElement="t_request">
+        <dc:Bounds x="222" y="32" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_model_di" bpmnElement="t_model">
+        <dc:Bounds x="380" y="162" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_check_di" bpmnElement="t_check">
+        <dc:Bounds x="538" y="682" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_pass_di" bpmnElement="g_pass" isMarkerVisible="true">
+        <dc:Bounds x="730" y="690" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_review_di" bpmnElement="t_review">
+        <dc:Bounds x="854" y="292" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_level_di" bpmnElement="g_level" isMarkerVisible="true">
+        <dc:Bounds x="1046" y="300" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_approve_di" bpmnElement="t_approve">
+        <dc:Bounds x="1170" y="422" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_raad_di" bpmnElement="t_raad">
+        <dc:Bounds x="1170" y="552" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_ok_di" bpmnElement="g_ok" isMarkerVisible="true">
+        <dc:Bounds x="1362" y="560" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_rej_di" bpmnElement="end_rej">
+        <dc:Bounds x="1527" y="567" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_release_di" bpmnElement="t_release">
+        <dc:Bounds x="1486" y="682" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_ok_di" bpmnElement="end_ok">
+        <dc:Bounds x="1685" y="697" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0_di" bpmnElement="Flow_0">
+        <di:waypoint x="141" y="65" />
+        <di:waypoint x="222" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="340" y="65" />
+        <di:waypoint x="360" y="65" />
+        <di:waypoint x="360" y="195" />
+        <di:waypoint x="380" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="439" y="228" />
+        <di:waypoint x="439" y="715" />
+        <di:waypoint x="538" y="715" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="656" y="715" />
+        <di:waypoint x="730" y="715" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="780" y="715" />
+        <di:waypoint x="913" y="715" />
+        <di:waypoint x="913" y="358" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="755" y="690" />
+        <di:waypoint x="755" y="195" />
+        <di:waypoint x="498" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="972" y="325" />
+        <di:waypoint x="1046" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7">
+        <di:waypoint x="1071" y="350" />
+        <di:waypoint x="1071" y="585" />
+        <di:waypoint x="1170" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8">
+        <di:waypoint x="1096" y="325" />
+        <di:waypoint x="1229" y="325" />
+        <di:waypoint x="1229" y="422" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9">
+        <di:waypoint x="1288" y="585" />
+        <di:waypoint x="1362" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10">
+        <di:waypoint x="1412" y="585" />
+        <di:waypoint x="1527" y="585" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11">
+        <di:waypoint x="1387" y="610" />
+        <di:waypoint x="1387" y="715" />
+        <di:waypoint x="1486" y="715" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12">
+        <di:waypoint x="1288" y="455" />
+        <di:waypoint x="1466" y="455" />
+        <di:waypoint x="1466" y="715" />
+        <di:waypoint x="1486" y="715" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13">
+        <di:waypoint x="1604" y="715" />
+        <di:waypoint x="1685" y="715" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Defs_otc_03_to_be" targetNamespace="https://github.com/phlppgdfry/manufacturing-process-architecture-case" exporter="build_models.py" exporterVersion="1">
+  <bpmn:collaboration id="Collab_otc_03_to_be">
+    <bpmn:participant id="Pool_otc_03_to_be" name="OTC-03 Leverdatum bevestigen — to-be v1.0 (na review)" processRef="Process_otc_03_to_be" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_otc_03_to_be" name="OTC-03 Leverdatum bevestigen — to-be v1.0 (na review)" isExecutable="false">
+    <bpmn:documentation>procesId: OTC-03
+niveau: L3
+type: to-be
+eigenaar: open (voorstel D-03: Supply chain director)
+versie: 1.0
+status: in-review
+volgt op: OTC-02 Order aanvaarden
+volgt: OTC-04 Order uitleveren</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_otc_03_to_be">
+      <bpmn:lane id="Lane_cs" name="Customer service">
+        <bpmn:flowNodeRef>t_cancel</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end_cancel</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_send</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>end_ok</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_am" name="Accountmanager">
+        <bpmn:flowNodeRef>t_negotiate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_acc</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_planner" name="Planner">
+        <bpmn:flowNodeRef>t_assess</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_feas</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_erp" name="ERP">
+        <bpmn:flowNodeRef>start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_atp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>g_std</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>t_register</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="start" name="Order aanvaard (uit OTC-02)">
+      <bpmn:outgoing>Flow_0</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="t_atp" name="Haalbare leverdatum voorstellen">
+      <bpmn:incoming>Flow_0</bpmn:incoming>
+      <bpmn:outgoing>Flow_1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="g_std" name="Binnen standaard levertermijn?">
+      <bpmn:incoming>Flow_1</bpmn:incoming>
+      <bpmn:outgoing>Flow_2</bpmn:outgoing>
+      <bpmn:outgoing>Flow_3</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_assess" name="Haalbaarheid met productie afstemmen">
+      <bpmn:incoming>Flow_3</bpmn:incoming>
+      <bpmn:outgoing>Flow_4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="g_feas" name="Gevraagde datum haalbaar?">
+      <bpmn:incoming>Flow_4</bpmn:incoming>
+      <bpmn:outgoing>Flow_5</bpmn:outgoing>
+      <bpmn:outgoing>Flow_6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_negotiate" name="Alternatieve datum met klant afstemmen">
+      <bpmn:incoming>Flow_6</bpmn:incoming>
+      <bpmn:outgoing>Flow_7</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="g_acc" name="Klant akkoord?">
+      <bpmn:incoming>Flow_7</bpmn:incoming>
+      <bpmn:outgoing>Flow_8</bpmn:outgoing>
+      <bpmn:outgoing>Flow_9</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="t_cancel" name="Order in overleg annuleren">
+      <bpmn:incoming>Flow_9</bpmn:incoming>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="end_cancel" name="Order geannuleerd">
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="t_register" name="Bevestigde leverdatum vastleggen">
+      <bpmn:incoming>Flow_2</bpmn:incoming>
+      <bpmn:incoming>Flow_5</bpmn:incoming>
+      <bpmn:incoming>Flow_8</bpmn:incoming>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sendTask id="t_send" name="Orderbevestiging met leverdatum versturen">
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+      <bpmn:outgoing>Flow_12</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:endEvent id="end_ok" name="Leverdatum bevestigd (naar OTC-04)">
+      <bpmn:incoming>Flow_12</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0" sourceRef="start" targetRef="t_atp" />
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="t_atp" targetRef="g_std" />
+    <bpmn:sequenceFlow id="Flow_2" name="ja" sourceRef="g_std" targetRef="t_register" />
+    <bpmn:sequenceFlow id="Flow_3" name="nee" sourceRef="g_std" targetRef="t_assess" />
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="t_assess" targetRef="g_feas" />
+    <bpmn:sequenceFlow id="Flow_5" name="ja" sourceRef="g_feas" targetRef="t_register" />
+    <bpmn:sequenceFlow id="Flow_6" name="nee" sourceRef="g_feas" targetRef="t_negotiate" />
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="t_negotiate" targetRef="g_acc" />
+    <bpmn:sequenceFlow id="Flow_8" name="ja" sourceRef="g_acc" targetRef="t_register" />
+    <bpmn:sequenceFlow id="Flow_9" name="nee" sourceRef="g_acc" targetRef="t_cancel" />
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="t_cancel" targetRef="end_cancel" />
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="t_register" targetRef="t_send" />
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="t_send" targetRef="end_ok" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram_otc_03_to_be">
+    <bpmndi:BPMNPlane id="Plane_otc_03_to_be" bpmnElement="Collab_otc_03_to_be">
+      <bpmndi:BPMNShape id="Pool_otc_03_to_be_di" bpmnElement="Pool_otc_03_to_be" isHorizontal="true">
+        <dc:Bounds x="0" y="0" width="1990" height="520" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_cs_di" bpmnElement="Lane_cs" isHorizontal="true">
+        <dc:Bounds x="34" y="0" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_am_di" bpmnElement="Lane_am" isHorizontal="true">
+        <dc:Bounds x="34" y="130" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_planner_di" bpmnElement="Lane_planner" isHorizontal="true">
+        <dc:Bounds x="34" y="260" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_erp_di" bpmnElement="Lane_erp" isHorizontal="true">
+        <dc:Bounds x="34" y="390" width="1956" height="130" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="start_di" bpmnElement="start">
+        <dc:Bounds x="105" y="437" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_atp_di" bpmnElement="t_atp">
+        <dc:Bounds x="222" y="422" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_std_di" bpmnElement="g_std" isMarkerVisible="true">
+        <dc:Bounds x="414" y="430" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_assess_di" bpmnElement="t_assess">
+        <dc:Bounds x="538" y="292" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_feas_di" bpmnElement="g_feas" isMarkerVisible="true">
+        <dc:Bounds x="730" y="300" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_negotiate_di" bpmnElement="t_negotiate">
+        <dc:Bounds x="854" y="162" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="g_acc_di" bpmnElement="g_acc" isMarkerVisible="true">
+        <dc:Bounds x="1046" y="170" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_cancel_di" bpmnElement="t_cancel">
+        <dc:Bounds x="1170" y="32" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_cancel_di" bpmnElement="end_cancel">
+        <dc:Bounds x="1369" y="47" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_register_di" bpmnElement="t_register">
+        <dc:Bounds x="1328" y="422" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="t_send_di" bpmnElement="t_send">
+        <dc:Bounds x="1644" y="32" width="118" height="66" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="end_ok_di" bpmnElement="end_ok">
+        <dc:Bounds x="1843" y="47" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0_di" bpmnElement="Flow_0">
+        <di:waypoint x="141" y="455" />
+        <di:waypoint x="222" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1">
+        <di:waypoint x="340" y="455" />
+        <di:waypoint x="414" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2">
+        <di:waypoint x="464" y="455" />
+        <di:waypoint x="1328" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3">
+        <di:waypoint x="439" y="430" />
+        <di:waypoint x="439" y="325" />
+        <di:waypoint x="538" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4">
+        <di:waypoint x="656" y="325" />
+        <di:waypoint x="730" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5">
+        <di:waypoint x="780" y="325" />
+        <di:waypoint x="1387" y="325" />
+        <di:waypoint x="1387" y="422" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6">
+        <di:waypoint x="755" y="300" />
+        <di:waypoint x="755" y="195" />
+        <di:waypoint x="854" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7">
+        <di:waypoint x="972" y="195" />
+        <di:waypoint x="1046" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8">
+        <di:waypoint x="1096" y="195" />
+        <di:waypoint x="1308" y="195" />
+        <di:waypoint x="1308" y="455" />
+        <di:waypoint x="1328" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9">
+        <di:waypoint x="1071" y="170" />
+        <di:waypoint x="1071" y="65" />
+        <di:waypoint x="1170" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10">
+        <di:waypoint x="1288" y="65" />
+        <di:waypoint x="1369" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11">
+        <di:waypoint x="1446" y="455" />
+        <di:waypoint x="1624" y="455" />
+        <di:waypoint x="1624" y="65" />
+        <di:waypoint x="1644" y="65" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12">
+        <di:waypoint x="1762" y="65" />
+        <di:waypoint x="1843" y="65" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
