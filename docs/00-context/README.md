@@ -60,6 +60,18 @@ De COO wil één proceshuis vóór die workshops. Een process architect wordt aa
 | R6 | Andere namen in ERP-documentatie dan in de procesboom ("Orderintake" vs "Order aanvaarden") | catalogusveld `aliases` |
 | R7 | Geen budget voor een procesrepository-tool dit jaar | [ADR-001](../adr/001-catalogus-als-code.md) |
 
+## Data en bronnen
+
+- Alle data is fictief en zelf opgesteld; de catalogus staat in [`catalog/catalog.json`](../../catalog/catalog.json).
+- Referentiekaders: BPMN 2.0.2 (OMG), TOGAF business architecture en ArchiMate (The Open Group), APQC PCF als controlelijst, Lean Six Sigma (IASSC). Zie [README — Sources](../../README.md#sources-data-and-licences).
+
+## Beperkingen
+
+- Gesprekken, workshops, procesraden en de review zijn uitgeschreven scenario's.
+- De demo simuleert beslissing en release; het checkrapport is echt.
+- Geen gemeten resultaten, geen procesrepository-tool, geen L4.
+- Volledige lijst: [README — Limitations](../../README.md#limitations).
+
 ## Aannames
 
 - Alle aantallen, KPI's en nulmetingen zijn *illustrative assumptions*.

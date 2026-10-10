@@ -74,16 +74,38 @@ Volledige mapping, inclusief wat deze case *niet* claimt: [EVIDENCE.md](EVIDENCE
 | `site/` | GitHub Pages: landing page, prototype met rondleiding, lenzen per rol |
 | `application-kit/` | samenvatting, demo-script, deck-outline |
 
-## Lokaal draaien
+## How to run and verify
+
+Alleen Python 3 (standaardbibliotheek), geen installatie.
 
 ```bash
+git clone https://github.com/phlppgdfry/manufacturing-process-architecture-case && cd manufacturing-process-architecture-case
+python3 -m unittest discover -s tests                                 # 17 tests van de modelregels
+python3 scripts/check_models.py                                       # alle modellen + catalogus: 4 × OK, 1 draft met 9 bevindingen
 python3 scripts/build_models.py && python3 scripts/build_catalog.py   # modellen en views opnieuw genereren
-python3 scripts/check_models.py --report site/data/check-report.json  # conventie toetsen
-python3 -m unittest discover -s tests                                 # tests
-python3 -m http.server -d site 8000                                   # site op http://localhost:8000
+git diff --exit-code                                                  # niets veranderd = gegenereerde bestanden zijn actueel
+python3 -m http.server -d site 8000                                   # site en demo op http://localhost:8000
 ```
 
-Alleen Python 3 (standaardbibliotheek). De BPMN-bestanden openen in [bpmn.io](https://demo.bpmn.io/) of Camunda Modeler.
+Dezelfde stappen draaien bij elke push in [GitHub Actions](.github/workflows/ci.yml). De BPMN-bestanden openen in [bpmn.io](https://demo.bpmn.io/) of Camunda Modeler.
+
+**Demo laadt niet?** Screenshots: [catalogus](docs/screenshots/demo-catalogus.png) · [review](docs/screenshots/demo-review.png) · [procesraad](docs/screenshots/demo-procesraad.png) · [landing page](docs/screenshots/landing.png).
+
+## Sources, data and licences
+
+- **Data:** volledig fictief en zelf opgesteld (Corvent Industries bestaat niet). Alle aantallen, KPI's en nulmetingen zijn *illustrative assumptions*. Geen gegevens van een werkgever of een echte organisatie.
+- **Standaarden en kaders** (alleen als referentie, niets gekopieerd): BPMN 2.0.2 ([OMG](https://www.omg.org/spec/BPMN/2.0.2/)), TOGAF business architecture ([The Open Group](https://www.opengroup.org/togaf)), ArchiMate 3 ([The Open Group](https://pubs.opengroup.org/architecture/archimate3-doc/)), APQC Process Classification Framework (genoemd als referentiekader), Lean Six Sigma / DMAIC ([IASSC](https://www.iassc.org/)).
+- **Afhankelijkheden:** geen. Python-standaardbibliotheek; de site is plain HTML/CSS/JS zonder externe scripts (Mermaid-diagrammen in de Markdown worden door GitHub gerenderd).
+- **Licentie:** code (scripts, tests, site) onder MIT, documentatie en diagrammen onder CC BY 4.0. Zie [LICENSE](LICENSE).
+- **Werkwijze:** uitgewerkt met AI-ondersteuning; keuzes, verantwoording en beperkingen staan in de ADR's en hieronder.
+
+## Limitations
+
+- **Fictief en zonder stakeholders.** Interviews, workshops, procesraden en de review zijn uitgeschreven scenario's, geen verslagen van echte gesprekken.
+- **Gesimuleerd in de demo:** de beslissing van de procesraad, de release van OTC-03 en de update van het modelattribuut. **Echt:** de catalogusdata, de BPMN-modellen en het checkrapport uit `check_models.py`.
+- **Niet aangetoond:** procesmanagement in een echte organisatie, gemeten resultaten, werken met een procesrepository-tool (de modellen zijn wel standaard BPMN 2.0 en importeerbaar).
+- **Bewust beperkt:** L3 alleen voor order-to-cash en de wijzigingsflow; geen L4-werkinstructies, geen process mining (zie [ADR-003](docs/adr/003-breed-ondiep-eerst.md)).
+- **Capability map** is afgeleid uit de bestaande procesarchitectuur, niet gevalideerd in een workshop met enterprise architectuur.
 
 ## Realisme en aannames
 

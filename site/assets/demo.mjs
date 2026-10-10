@@ -279,7 +279,7 @@ async function main() {
   renderAll();
 
   const tour = createTour([
-    { text: "Het proceshuis van Corvent: 41 actieve L2-processen onder 10 end-to-end processen. Elk proces heeft een ID, status, capability en systemen, allemaal uit één bron (catalog.json).",
+    { text: "Het proceshuis van Corvent: 41 actieve L2-processen onder 10 end-to-end processen, allemaal uit één bron (catalog.json). Keuze: catalogus en modellen als bestanden met automatische checks, geen tool zonder budget (ADR-001).",
       focus: "#kpis", before: () => { reset(); } },
     { text: "Filter 'zonder eigenaar': 8 processen, plus het hele L1-proces issue-to-resolution. Dit is geen falen maar de werklijst van de governance (regel C04).",
       focus: "#list", before: () => { show("catalogus"); setFilter({ noOwner: true }); } },
@@ -289,16 +289,16 @@ async function main() {
       focus: "#findings", before: () => { show("review"); state.reviewModel = "draft"; renderReview(); } },
     { text: "Mijn feedback: vijf punten over betekenis, elk als vraag. Naamgeving en labels lost de analist zelf op met de checklist.",
       focus: "#feedback", before: () => { show("review"); } },
-    { text: "De herwerkte versie v1.0: lanes zijn rollen, drie duidelijke vragen, uitzonderingspaden en overdrachten. 0 bevindingen.",
+    { text: "De herwerkte versie v1.0: 0 bevindingen. Keuze: de inclusieve gateway werd drie exclusieve vragen, omdat bijna iedereen een inclusieve gateway anders leest (ADR-002).",
       focus: "#review-figure", before: () => { show("review"); state.reviewModel = "tobe"; renderReview(); } },
-    { text: "Wat geen model kan oplossen, gaat naar de procesraad: wie is eigenaar van de bevestigde leverdatum? Drie opties; het voorstel is B.",
+    { text: "Wat geen model kan oplossen, gaat naar de procesraad: wie is eigenaar van de bevestigde leverdatum? Drie opties; het voorstel is B. Optie C (gedeeld) weigert de catalogus: één eigenaar per proces.",
       focus: "#d03", before: () => { show("procesraad"); const b = document.querySelector('input[name="d03"][value="B"]'); if (b && !b.disabled) b.checked = true; } },
     { text: "De raad beslist B. Achter de schermen: het modelattribuut wordt bijgewerkt, de check blijft groen, en OTC-03 wordt released.",
       focus: ".eventlog", before: () => { show("procesraad"); decide("B"); } },
-    { text: "Terug in de catalogus: OTC-03 heeft een eigenaar en is released. De dekking stijgt naar 34 met eigenaar en 9 released.",
-      focus: "#detail", before: () => { show("catalogus"); setFilter({}); select("OTC-03"); } },
-    { text: "En het verbeterportfolio: I-02 (haalbare leverdatum, KPI van 42% naar 85% binnen 4 werkuren) heeft nu een eigenaar en kan starten. Dat is de keten: catalogus → review → beslissing → verbetering.",
+    { text: "Resultaat: OTC-03 heeft een eigenaar en is released (dekking 34 met eigenaar, 9 released), en verbeterinitiatief I-02 (bevestigd binnen 4 werkuren, van 42% naar 85%) kan starten.",
       focus: "#row-I-02", before: () => { show("verbeteringen"); } },
+    { text: "Beperkingen: de procesraad, de release en de update van het model zijn gesimuleerd; de catalogusdata en het checkrapport zijn echt. De case toont geen echte organisatie, geen gemeten resultaten en geen procesrepository-tool. Alle cijfers zijn illustratief.",
+      focus: ".demo-head", before: () => { show("catalogus"); setFilter({}); select("OTC-03"); } },
   ], { label: "Rondleiding", labels: { step: "Stap", of: "van", back: "Terug", next: "Volgende", finish: "Klaar", close: "Sluiten" } });
   $("#btn-tour").addEventListener("click", () => tour.start());
 }
