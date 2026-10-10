@@ -72,7 +72,7 @@ Volledige mapping, inclusief wat deze case *niet* claimt: [EVIDENCE.md](EVIDENCE
 | `scripts/` | `build_models.py` (BPMN + SVG), `build_catalog.py` (views), `check_models.py` (conventie als code), `check-links.py` |
 | `tests/` | tests van de modelregels |
 | `site/` | GitHub Pages: landing page, prototype met rondleiding, lenzen per rol |
-| `application-kit/` | samenvatting, demo-script, deck-outline |
+| `application-kit/` | samenvatting (+PDF), deck (+PDF, notities), demo-scripts 2/5/15 min, views per lezer, rolmatrix |
 
 ## How to run and verify
 

@@ -1,0 +1,31 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Samenvatting — Corvent Process House</title><meta name="robots" content="noindex"><style>
+@page{size:A4;margin:13mm 14mm}*{box-sizing:border-box}body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1b2430;font-size:9.6pt;line-height:1.4;margin:0 auto;max-width:190mm;padding:8px}
+h1{font-size:18pt;margin:0}h2{font-size:10pt;text-transform:uppercase;letter-spacing:.06em;color:#1f5f6b;border-bottom:1px solid #c9d3de;margin:10px 0 4px;padding-bottom:2px}
+.sub{color:#5b6675;margin:2px 0 6px}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #e3e7ec;padding:3px 6px;text-align:left;vertical-align:top}th{color:#5b6675;font-size:8.5pt}
+ol{margin:0;padding-left:16px}li{margin-bottom:2px}pre{background:#f3f6f9;padding:6px 8px;font-size:8.5pt;margin:0}.note{font-style:italic;color:#5b6675;font-size:8.5pt}a{color:#1f5f6b}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+</style></head><body>
+<h1>Corvent Process House — procesarchitectuur die gebruikt wordt</h1>
+<p class="sub">Independent portfolio case study based on a fictional organisation · Philippe Godfroy · <a href="https://phlppgdfry.github.io/manufacturing-process-architecture-case/">phlppgdfry.github.io/manufacturing-process-architecture-case</a></p>
+<h2>Uitdaging</h2><p>Een fictieve maakindustrie (±950 medewerkers) liet een procesarchitectuur tekenen op capabilities en end-to-end processen. Niemand gebruikt die: 8 van de 41 processen hebben geen eigenaar, slechts 8 hebben een vrijgegeven model, vier analisten tekenen elk anders, en over zes weken wil het ERP-project vrijgegeven to-be-processen.</p>
+<h2>Aanpak</h2><p>Frame → Structure → Standardise → Model → Review → Govern → Improve. De bestaande architectuur blijft de basis; ze wordt beheerd, getoetst en gebruikt.</p>
+<div class="cols"><div><h2>Wat ik opleverde</h2><ol>
+<li><strong>Procescatalogus</strong> uit één bron: 41 processen met eigenaar, status, capability, systemen, reviewdatum.</li>
+<li><strong>Capability map</strong> met heatmap; koppeling proces ↔ applicatie.</li>
+<li><strong>Modelleerconventie</strong> en <strong>checklist van 18 regels</strong>, 13 automatisch getoetst in CI (17 tests).</li>
+<li><strong>Referentiemodel order-to-cash</strong> L1 → L3, as-is en to-be.</li>
+<li><strong>Review van een analistenmodel</strong>: 9 bevindingen → 0, met 5 vragen.</li>
+<li><strong>Governance</strong>: RACI, statussen, procesraad, wijzigingsflow als getoetst proces.</li></ol></div>
+<div><h2>Oplossing</h2><pre>catalog.json ──► catalogus, proceshuis, capability map, site
+BPMN 2.0     ──► check_models.py (R01–R13) ──► CI
+procesraad   ──► beslissing ──► released ──► verbetering</pre>
+<h2>Doelen</h2><table><tr><th>Indicator</th><th>Start</th><th>12 mnd</th></tr><tr><td>Processen met eigenaar</td><td>33/41</td><td>41/41</td></tr><tr><td>Vrijgegeven</td><td>8/41</td><td>30/41</td></tr><tr><td>Bevestigd binnen 4 werkuren</td><td>42%</td><td>85%</td></tr></table><p class="note">Illustrative assumptions — not real company data.</p></div></div>
+<h2>Rolfit</h2><table><tr><th>Vereiste</th><th>Bewijs</th></tr>
+<tr><td>Procescatalogus beheren</td><td>catalogus, dekking, werklijst van governance-gaten</td></tr>
+<tr><td>Procesarchitectuur op capabilities en E2E</td><td>capability map, procesboom L0–L4, overdrachten</td></tr>
+<tr><td>Standaarden en kwaliteit</td><td>conventie, sjabloon, checklist, automatische check</td></tr>
+<tr><td>BPMN as-is/to-be</td><td>order-to-cash met pijnpunten en uitzonderingen</td></tr>
+<tr><td>Analisten coachen</td><td>review met vijf vragen, onboarding-kit</td></tr>
+<tr><td>Procesgovernance</td><td>RACI, procesraad met beslissingslog, wijzigingsflow</td></tr></table>
+<p class="note">Fictieve organisatie; uitgewerkt met AI-ondersteuning; geen gemeten resultaten. Demo van 2 minuten: …/demo/?tour</p>
+</body></html>
