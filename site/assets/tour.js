@@ -75,8 +75,8 @@ export function createTour(steps, { label = "Guided tour", labels = {} } = {}) {
 
   const tour = { start: () => show(0), stop: () => show(-1), show };
   if (new URLSearchParams(location.search).has("tour")) {
-    // let the prototype render first
-    requestAnimationFrame(() => tour.start());
+    // let the prototype render first; setTimeout also fires in background tabs, where requestAnimationFrame does not
+    setTimeout(() => tour.start(), 0);
   }
   return tour;
 }
